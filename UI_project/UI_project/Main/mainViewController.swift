@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class mainViewController: UIViewController {
     //делаем аутлет для scrollview
     @IBOutlet weak var loginScrollView: UIScrollView!
     
@@ -94,13 +94,37 @@ class ViewController: UIViewController {
         let pass = passwordTextField.text
         //проверяем логин и пароль
         if login == "admin" && pass == "1234" {
-            print("Успешная авторизация")
+            self.showDebugScene()
         } else {
-            print("Неуспешная авторизация")
+            self.showAuthAlert()
         }
         
         
     }
+    //функция, вызывающая алерт при вводе неправильного логина или пароля
+    private func showAuthAlert(){
+        //делаем алерт контролер
+        let ac = UIAlertController(
+            title: "Ошибка",
+            message: "Логин или пароль введены неверно",
+            preferredStyle: .alert)
+        //делаем action для алерта
+        let action = UIAlertAction(
+            title: "Ну хорошо",
+            style: .default)
+        //добавляем action к контроллеру
+        ac.addAction(action)
+        //показываем алерт
+        self.present(ac, animated: true)
+    }
     
+    private func showDebugScene(){
+        let storyBoard = UIStoryboard(name: "DebugMenu", bundle: nil)
+        let debugViewController = storyBoard.instantiateInitialViewController()
+        debugViewController?.modalPresentationStyle = .fullScreen
+        if let viewController = debugViewController as? DebugMenuViewController {
+            self.present(viewController, animated: true)
+        }
+    }
 }
 
