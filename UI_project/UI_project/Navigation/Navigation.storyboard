@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R9t-a6-6R1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19134"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="vvk-62-zRd">
+            <objects>
+                <navigationController id="R9t-a6-6R1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="zrg-WO-AMP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="v3R-ZW-b8O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qh7-kK-oxg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-784" y="-48"/>
+        </scene>
+        <!--Первый экран-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="firstNavigationViewController" customModule="UI_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbG-zC-Xo9">
+                                <rect key="frame" x="114" y="532.5" width="186.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Вернуться к выбору игр"/>
+                                <connections>
+                                    <action selector="returnButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3sf-kf-kQ4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cln-fC-plc">
+                                <rect key="frame" x="138.5" y="432.5" width="137" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Перейти дальше"/>
+                                <connections>
+                                    <segue destination="ne4-b4-jWy" kind="show" id="d90-Qz-Rir"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cln-fC-plc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Gj7-cv-l5x"/>
+                            <constraint firstItem="RbG-zC-Xo9" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="cB0-PP-2iE"/>
+                            <constraint firstItem="Cln-fC-plc" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="dWI-1D-c8i"/>
+                            <constraint firstItem="RbG-zC-Xo9" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="100" id="yDN-X8-pho"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Первый экран" id="ICR-nT-Ws9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55" y="-48"/>
+        </scene>
+        <!--Второй экран-->
+        <scene sceneID="fnP-lB-qbl">
+            <objects>
+                <viewController id="ne4-b4-jWy" customClass="secondNavigationViewController" customModule="UI_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zmd-bg-iq9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LL-TL-EXF">
+                                <rect key="frame" x="146.5" y="432.5" width="121" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="И ещё дальше"/>
+                                <connections>
+                                    <segue destination="gKd-Wf-g62" kind="show" id="85a-hi-aYF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="usQ-9l-Xda"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9LL-TL-EXF" firstAttribute="centerX" secondItem="Zmd-bg-iq9" secondAttribute="centerX" id="1qw-mC-66r"/>
+                            <constraint firstItem="9LL-TL-EXF" firstAttribute="centerY" secondItem="Zmd-bg-iq9" secondAttribute="centerY" id="rzN-8a-hxW"/>
+                            <constraint firstItem="9LL-TL-EXF" firstAttribute="centerY" secondItem="Zmd-bg-iq9" secondAttribute="centerY" id="tnT-2R-wHC"/>
+                            <constraint firstItem="9LL-TL-EXF" firstAttribute="centerX" secondItem="Zmd-bg-iq9" secondAttribute="centerX" id="uj7-en-oAn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Второй экран" id="I4L-rt-Bes"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tuz-j9-fKA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="-48"/>
+        </scene>
+        <!--Третий экран-->
+        <scene sceneID="naK-yC-mUf">
+            <objects>
+                <viewController id="gKd-Wf-g62" customClass="thirdNavigationViewController" customModule="UI_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hOw-2h-EWt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQW-kL-RtI">
+                                <rect key="frame" x="101" y="432.5" width="212" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Вернуться на первый экран"/>
+                                <connections>
+                                    <action selector="thirdNavButtonPressed:" destination="gKd-Wf-g62" eventType="touchUpInside" id="ZkK-nQ-EWA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2i8-Ud-4mP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RQW-kL-RtI" firstAttribute="centerY" secondItem="hOw-2h-EWt" secondAttribute="centerY" id="HZJ-d0-iJf"/>
+                            <constraint firstItem="RQW-kL-RtI" firstAttribute="centerX" secondItem="hOw-2h-EWt" secondAttribute="centerX" id="Pvv-ka-60x"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Третий экран" id="m4W-qu-iBd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wME-Bo-1Ay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1899" y="-48"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

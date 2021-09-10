@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Obh-Ud-DlV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19134"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5Qw-Ur-Owi">
+            <objects>
+                <tabBarController id="Obh-Ud-DlV" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6rw-pD-mYL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9uh-Pl-zNh" kind="relationship" relationship="viewControllers" id="Mpe-XO-B7p"/>
+                        <segue destination="Dqe-tz-FIh" kind="relationship" relationship="viewControllers" id="F4I-9d-jPY"/>
+                        <segue destination="kOZ-e3-KBp" kind="relationship" relationship="viewControllers" id="tDt-sw-UQq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JKN-cX-Tnl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="704"/>
+        </scene>
+        <!--First-->
+        <scene sceneID="ZWl-7P-ij2">
+            <objects>
+                <viewController id="9uh-Pl-zNh" customClass="TabPlayViewController" customModule="UI_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cUx-hh-wOD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlO-sL-08d">
+                                <rect key="frame" x="77" y="432.5" width="260" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Переключиться на вторую вкладку"/>
+                                <connections>
+                                    <action selector="firstTabButtonPressed:" destination="9uh-Pl-zNh" eventType="touchUpInside" id="ZF2-cb-KeX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Первая вкладка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tah-bF-qst">
+                                <rect key="frame" x="134" y="336" width="146.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v39-jK-rb2">
+                                <rect key="frame" x="88.5" y="532.5" width="237.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Вернуться к списку выбора игр"/>
+                                <connections>
+                                    <action selector="returnButtonPressed:" destination="9uh-Pl-zNh" eventType="touchUpInside" id="AX4-Jh-0lc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TV6-Ab-8Jg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nlO-sL-08d" firstAttribute="centerY" secondItem="cUx-hh-wOD" secondAttribute="centerY" id="4jJ-lZ-Ryf"/>
+                            <constraint firstItem="tah-bF-qst" firstAttribute="centerY" secondItem="cUx-hh-wOD" secondAttribute="centerY" constant="-100" id="4p9-Yj-30o"/>
+                            <constraint firstItem="v39-jK-rb2" firstAttribute="centerX" secondItem="cUx-hh-wOD" secondAttribute="centerX" id="7iC-YO-Hen"/>
+                            <constraint firstItem="nlO-sL-08d" firstAttribute="centerX" secondItem="cUx-hh-wOD" secondAttribute="centerX" id="Qvp-5L-zhF"/>
+                            <constraint firstItem="tah-bF-qst" firstAttribute="centerX" secondItem="cUx-hh-wOD" secondAttribute="centerX" id="ayJ-eF-2z5"/>
+                            <constraint firstItem="v39-jK-rb2" firstAttribute="centerY" secondItem="cUx-hh-wOD" secondAttribute="centerY" constant="100" id="gPm-K2-0MZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="First" id="vHg-IR-GfL">
+                        <imageReference key="image" image="lasso" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2BG-47-dX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-709" y="1371"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="cS5-ze-5Oz">
+            <objects>
+                <viewController id="Dqe-tz-FIh" customClass="secondTabViewController" customModule="UI_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Bp-4Z-fay">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozZ-xx-X41">
+                                <rect key="frame" x="77.5" y="432.5" width="259" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Переключиться на третью вкладку"/>
+                                <connections>
+                                    <action selector="secondButtonePressed:" destination="Dqe-tz-FIh" eventType="touchUpInside" id="43h-zB-DVq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MD5-ud-UIH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ozZ-xx-X41" firstAttribute="centerY" secondItem="0Bp-4Z-fay" secondAttribute="centerY" id="XZy-xV-wuj"/>
+                            <constraint firstItem="ozZ-xx-X41" firstAttribute="centerX" secondItem="0Bp-4Z-fay" secondAttribute="centerX" id="p8Q-Lz-PKm"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" id="K64-Lx-WKr">
+                        <imageReference key="image" image="network" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cqE-Mo-4aU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="1371"/>
+        </scene>
+        <!--Third-->
+        <scene sceneID="uor-0D-Sxr">
+            <objects>
+                <viewController id="kOZ-e3-KBp" customClass="thirdTabViewController" customModule="UI_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9gE-Xd-cN9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lq9-oQ-Wf2">
+                                <rect key="frame" x="46.5" y="432.5" width="321.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Переключиться обратно на первую вкладку"/>
+                                <connections>
+                                    <action selector="thirdButtonPressed:" destination="kOZ-e3-KBp" eventType="touchUpInside" id="fqo-8c-FHx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XLk-EF-gJx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lq9-oQ-Wf2" firstAttribute="centerY" secondItem="9gE-Xd-cN9" secondAttribute="centerY" id="3Gj-C3-k86"/>
+                            <constraint firstItem="lq9-oQ-Wf2" firstAttribute="centerX" secondItem="9gE-Xd-cN9" secondAttribute="centerX" id="Xjd-R0-tWm"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Third" id="aN4-vn-tRe">
+                        <imageReference key="image" image="character.hi" catalog="system" symbolScale="small"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Kn-ec-pd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="1371"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="character.hi" catalog="system" width="128" height="106"/>
+        <image name="lasso" catalog="system" width="128" height="118"/>
+        <image name="network" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
