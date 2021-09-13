@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Obh-Ud-DlV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19158" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Obh-Ud-DlV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19141"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="-23" y="704"/>
         </scene>
-        <!--First-->
+        <!--Table-->
         <scene sceneID="ZWl-7P-ij2">
             <objects>
                 <viewController id="9uh-Pl-zNh" customClass="TabPlayViewController" customModule="UI_project" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,49 +37,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlO-sL-08d">
-                                <rect key="frame" x="77" y="432.5" width="260" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Переключиться на вторую вкладку"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xex-BS-8CI">
+                                <rect key="frame" x="0.0" y="280" width="414" height="533"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="firstTabButtonPressed:" destination="9uh-Pl-zNh" eventType="touchUpInside" id="ZF2-cb-KeX"/>
+                                    <outlet property="dataSource" destination="9uh-Pl-zNh" id="Vad-J4-Gdq"/>
+                                    <outlet property="delegate" destination="9uh-Pl-zNh" id="iyV-oX-HDo"/>
                                 </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Первая вкладка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tah-bF-qst">
-                                <rect key="frame" x="134" y="336" width="146.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v39-jK-rb2">
-                                <rect key="frame" x="88.5" y="532.5" width="237.5" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Вернуться к списку выбора игр"/>
-                                <connections>
-                                    <action selector="returnButtonPressed:" destination="9uh-Pl-zNh" eventType="touchUpInside" id="AX4-Jh-0lc"/>
-                                </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TV6-Ab-8Jg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="nlO-sL-08d" firstAttribute="centerY" secondItem="cUx-hh-wOD" secondAttribute="centerY" id="4jJ-lZ-Ryf"/>
-                            <constraint firstItem="tah-bF-qst" firstAttribute="centerY" secondItem="cUx-hh-wOD" secondAttribute="centerY" constant="-100" id="4p9-Yj-30o"/>
-                            <constraint firstItem="v39-jK-rb2" firstAttribute="centerX" secondItem="cUx-hh-wOD" secondAttribute="centerX" id="7iC-YO-Hen"/>
-                            <constraint firstItem="nlO-sL-08d" firstAttribute="centerX" secondItem="cUx-hh-wOD" secondAttribute="centerX" id="Qvp-5L-zhF"/>
-                            <constraint firstItem="tah-bF-qst" firstAttribute="centerX" secondItem="cUx-hh-wOD" secondAttribute="centerX" id="ayJ-eF-2z5"/>
-                            <constraint firstItem="v39-jK-rb2" firstAttribute="centerY" secondItem="cUx-hh-wOD" secondAttribute="centerY" constant="100" id="gPm-K2-0MZ"/>
-                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" id="vHg-IR-GfL">
+                    <tabBarItem key="tabBarItem" title="Table" id="vHg-IR-GfL">
                         <imageReference key="image" image="lasso" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="xex-BS-8CI" id="8H5-9f-2jG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2BG-47-dX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-709" y="1371"/>
+            <point key="canvasLocation" x="-710.14492753623199" y="1370.7589285714284"/>
         </scene>
-        <!--Second-->
+        <!--Collection-->
         <scene sceneID="cS5-ze-5Oz">
             <objects>
                 <viewController id="Dqe-tz-FIh" customClass="secondTabViewController" customModule="UI_project" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,31 +69,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozZ-xx-X41">
-                                <rect key="frame" x="77.5" y="432.5" width="259" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Переключиться на третью вкладку"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bfc-Z6-bc5">
+                                <rect key="frame" x="18.705722070844558" y="44" width="373.99999999999989" height="585.00000000000045"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0eL-ed-gdl">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCell" id="btN-a5-gI1">
+                                        <rect key="frame" x="0.0" y="50" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lIj-J2-ddo">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Kdc-F8-BtB">
+                                    <rect key="frame" x="0.0" y="0.0" width="373.99999999999989" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
                                 <connections>
-                                    <action selector="secondButtonePressed:" destination="Dqe-tz-FIh" eventType="touchUpInside" id="43h-zB-DVq"/>
+                                    <outlet property="dataSource" destination="Dqe-tz-FIh" id="fOJ-9O-s3R"/>
+                                    <outlet property="delegate" destination="Dqe-tz-FIh" id="Y60-rG-lnH"/>
                                 </connections>
-                            </button>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MD5-ud-UIH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ozZ-xx-X41" firstAttribute="centerY" secondItem="0Bp-4Z-fay" secondAttribute="centerY" id="XZy-xV-wuj"/>
-                            <constraint firstItem="ozZ-xx-X41" firstAttribute="centerX" secondItem="0Bp-4Z-fay" secondAttribute="centerX" id="p8Q-Lz-PKm"/>
-                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" id="K64-Lx-WKr">
+                    <tabBarItem key="tabBarItem" title="Collection" id="K64-Lx-WKr">
                         <imageReference key="image" image="network" catalog="system" symbolScale="medium"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="CollectionView" destination="Bfc-Z6-bc5" id="Iro-WD-eS6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqE-Mo-4aU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="1371"/>
+            <point key="canvasLocation" x="-23.188405797101453" y="1546.875"/>
         </scene>
-        <!--Third-->
+        <!--Test Third-->
         <scene sceneID="uor-0D-Sxr">
             <objects>
                 <viewController id="kOZ-e3-KBp" customClass="thirdTabViewController" customModule="UI_project" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,7 +138,7 @@
                             <constraint firstItem="lq9-oQ-Wf2" firstAttribute="centerX" secondItem="9gE-Xd-cN9" secondAttribute="centerX" id="Xjd-R0-tWm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Third" id="aN4-vn-tRe">
+                    <tabBarItem key="tabBarItem" title="Test Third" id="aN4-vn-tRe">
                         <imageReference key="image" image="character.hi" catalog="system" symbolScale="small"/>
                     </tabBarItem>
                 </viewController>
@@ -149,6 +153,9 @@
         <image name="network" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

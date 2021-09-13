@@ -16,6 +16,7 @@
 		9942153026E26E51007F635F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9942152E26E26E51007F635F /* Main.storyboard */; };
 		9942153226E26E52007F635F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9942153126E26E52007F635F /* Assets.xcassets */; };
 		9942153526E26E52007F635F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9942153326E26E52007F635F /* LaunchScreen.storyboard */; };
+		9942949126EF40FD00E02EEF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9942949026EF40FD00E02EEF /* Constants.swift */; };
 		994D98B026E916F900565D1C /* DebugMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994D98AF26E916F900565D1C /* DebugMenu.storyboard */; };
 		994D98B426E9173E00565D1C /* DebugMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D98B326E9173E00565D1C /* DebugMenuViewController.swift */; };
 		994D98B726E9210B00565D1C /* TabPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D98B626E9210B00565D1C /* TabPlayViewController.swift */; };
@@ -23,6 +24,12 @@
 		9951D7D826EA2E61004951F4 /* firstNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9951D7D726EA2E61004951F4 /* firstNavigationViewController.swift */; };
 		996220F626EA25770004A508 /* secondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996220F526EA25770004A508 /* secondTabViewController.swift */; };
 		996220F826EA26440004A508 /* thirdTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996220F726EA26440004A508 /* thirdTabViewController.swift */; };
+		99FE9C4B26EF6678003C25AB /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE9C4926EF6678003C25AB /* ExampleTableViewCell.swift */; };
+		99FE9C4C26EF6678003C25AB /* ExampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FE9C4A26EF6678003C25AB /* ExampleTableViewCell.xib */; };
+		99FE9C5126EF7ACF003C25AB /* ExampleSecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE9C4F26EF7ACF003C25AB /* ExampleSecondTableViewCell.swift */; };
+		99FE9C5226EF7ACF003C25AB /* ExampleSecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FE9C5026EF7ACF003C25AB /* ExampleSecondTableViewCell.xib */; };
+		99FE9C5626EF8D2D003C25AB /* ExampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE9C5426EF8D2D003C25AB /* ExampleCollectionViewCell.swift */; };
+		99FE9C5726EF8D2D003C25AB /* ExampleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FE9C5526EF8D2D003C25AB /* ExampleCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +44,7 @@
 		9942153126E26E52007F635F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9942153426E26E52007F635F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9942153626E26E52007F635F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9942949026EF40FD00E02EEF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		994D98AF26E916F900565D1C /* DebugMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugMenu.storyboard; sourceTree = "<group>"; };
 		994D98B326E9173E00565D1C /* DebugMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugMenuViewController.swift; sourceTree = "<group>"; };
 		994D98B626E9210B00565D1C /* TabPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPlayViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +52,12 @@
 		9951D7D726EA2E61004951F4 /* firstNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstNavigationViewController.swift; sourceTree = "<group>"; };
 		996220F526EA25770004A508 /* secondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondTabViewController.swift; sourceTree = "<group>"; };
 		996220F726EA26440004A508 /* thirdTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdTabViewController.swift; sourceTree = "<group>"; };
+		99FE9C4926EF6678003C25AB /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
+		99FE9C4A26EF6678003C25AB /* ExampleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleTableViewCell.xib; sourceTree = "<group>"; };
+		99FE9C4F26EF7ACF003C25AB /* ExampleSecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleSecondTableViewCell.swift; sourceTree = "<group>"; };
+		99FE9C5026EF7ACF003C25AB /* ExampleSecondTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleSecondTableViewCell.xib; sourceTree = "<group>"; };
+		99FE9C5426EF8D2D003C25AB /* ExampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewCell.swift; sourceTree = "<group>"; };
+		99FE9C5526EF8D2D003C25AB /* ExampleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +99,7 @@
 				9942153126E26E52007F635F /* Assets.xcassets */,
 				9942153326E26E52007F635F /* LaunchScreen.storyboard */,
 				9942153626E26E52007F635F /* Info.plist */,
+				9942949026EF40FD00E02EEF /* Constants.swift */,
 			);
 			path = UI_project;
 			sourceTree = "<group>";
@@ -110,9 +125,11 @@
 		994D98BA26E92A1000565D1C /* TabPlay */ = {
 			isa = PBXGroup;
 			children = (
-				994D98B626E9210B00565D1C /* TabPlayViewController.swift */,
 				994D98B826E927B300565D1C /* TabPlay.storyboard */,
+				994D98B626E9210B00565D1C /* TabPlayViewController.swift */,
+				99FE9C4E26EF66B4003C25AB /* Cell */,
 				996220F526EA25770004A508 /* secondTabViewController.swift */,
+				99FE9C5926EF8D4D003C25AB /* Cell */,
 				996220F726EA26440004A508 /* thirdTabViewController.swift */,
 			);
 			path = TabPlay;
@@ -127,6 +144,52 @@
 				991BF9CC26EA2F60009E4D5D /* thirdNavigationViewController.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		99FE9C4D26EF6680003C25AB /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				99FE9C4926EF6678003C25AB /* ExampleTableViewCell.swift */,
+				99FE9C4A26EF6678003C25AB /* ExampleTableViewCell.xib */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		99FE9C4E26EF66B4003C25AB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				99FE9C4D26EF6680003C25AB /* Example */,
+				99FE9C5326EF7AD4003C25AB /* ExampleSecond */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		99FE9C5326EF7AD4003C25AB /* ExampleSecond */ = {
+			isa = PBXGroup;
+			children = (
+				99FE9C4F26EF7ACF003C25AB /* ExampleSecondTableViewCell.swift */,
+				99FE9C5026EF7ACF003C25AB /* ExampleSecondTableViewCell.xib */,
+			);
+			path = ExampleSecond;
+			sourceTree = "<group>";
+		};
+		99FE9C5826EF8D34003C25AB /* ExampleCollection */ = {
+			isa = PBXGroup;
+			children = (
+				99FE9C5426EF8D2D003C25AB /* ExampleCollectionViewCell.swift */,
+				99FE9C5526EF8D2D003C25AB /* ExampleCollectionViewCell.xib */,
+			);
+			name = ExampleCollection;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		99FE9C5926EF8D4D003C25AB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				99FE9C5826EF8D34003C25AB /* ExampleCollection */,
+			);
+			name = Cell;
+			path = ExampleCollection/Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,9 +252,12 @@
 			files = (
 				991BF9C926EA2EE0009E4D5D /* Navigation.storyboard in Resources */,
 				9942153526E26E52007F635F /* LaunchScreen.storyboard in Resources */,
+				99FE9C5726EF8D2D003C25AB /* ExampleCollectionViewCell.xib in Resources */,
+				99FE9C5226EF7ACF003C25AB /* ExampleSecondTableViewCell.xib in Resources */,
 				9942153226E26E52007F635F /* Assets.xcassets in Resources */,
 				9942153026E26E51007F635F /* Main.storyboard in Resources */,
 				994D98B926E927B300565D1C /* TabPlay.storyboard in Resources */,
+				99FE9C4C26EF6678003C25AB /* ExampleTableViewCell.xib in Resources */,
 				994D98B026E916F900565D1C /* DebugMenu.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,12 +270,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				996220F626EA25770004A508 /* secondTabViewController.swift in Sources */,
+				9942949126EF40FD00E02EEF /* Constants.swift in Sources */,
 				994D98B726E9210B00565D1C /* TabPlayViewController.swift in Sources */,
 				996220F826EA26440004A508 /* thirdTabViewController.swift in Sources */,
+				99FE9C5126EF7ACF003C25AB /* ExampleSecondTableViewCell.swift in Sources */,
+				99FE9C5626EF8D2D003C25AB /* ExampleCollectionViewCell.swift in Sources */,
 				991BF9CB26EA2F34009E4D5D /* secondNavigationViewController.swift in Sources */,
 				9942152D26E26E51007F635F /* mainViewController.swift in Sources */,
 				9942152926E26E51007F635F /* AppDelegate.swift in Sources */,
 				991BF9CD26EA2F60009E4D5D /* thirdNavigationViewController.swift in Sources */,
+				99FE9C4B26EF6678003C25AB /* ExampleTableViewCell.swift in Sources */,
 				9951D7D826EA2E61004951F4 /* firstNavigationViewController.swift in Sources */,
 				9942152B26E26E51007F635F /* SceneDelegate.swift in Sources */,
 				994D98B426E9173E00565D1C /* DebugMenuViewController.swift in Sources */,
