@@ -21,6 +21,7 @@ class DebugMenuViewController: UIViewController {
         let storyBoard = UIStoryboard(name: "TabPlay", bundle: nil)
         let tabPlayViewController = storyBoard.instantiateInitialViewController()
         tabPlayViewController?.modalPresentationStyle = .fullScreen
+        
         if let tabViewController = tabPlayViewController {
             print(2)
             self.present(tabViewController, animated: true)

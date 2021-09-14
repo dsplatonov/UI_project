@@ -93,7 +93,7 @@ class mainViewController: UIViewController {
         let login = loginTextField.text
         let pass = passwordTextField.text
         //проверяем логин и пароль
-        if login == "admin" && pass == "1234" {
+        if login == "" && pass == "" {
             self.showDebugScene()
         } else {
             self.showAuthAlert()
