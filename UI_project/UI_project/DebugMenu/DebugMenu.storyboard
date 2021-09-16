@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19158" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19141"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,13 +32,23 @@
                                     <action selector="navigationButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="H7M-wK-jse"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TV-Zh-vMc">
+                                <rect key="frame" x="116" y="531" width="182" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Посмотреть рисование"/>
+                                <connections>
+                                    <action selector="drawingButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="npi-2C-yu0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vcl-A3-aaS" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Fyd-EB-4z0"/>
+                            <constraint firstItem="9TV-Zh-vMc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="L3H-0o-Sgj"/>
                             <constraint firstItem="yg5-lP-WZM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Xs1-oA-1Rp"/>
                             <constraint firstItem="yg5-lP-WZM" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-100" id="lK6-4K-Tjd"/>
+                            <constraint firstItem="9TV-Zh-vMc" firstAttribute="top" secondItem="vcl-A3-aaS" secondAttribute="bottom" constant="67.5" id="trA-JH-QIn"/>
                             <constraint firstItem="vcl-A3-aaS" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="xxs-dA-wZ1"/>
                         </constraints>
                     </view>

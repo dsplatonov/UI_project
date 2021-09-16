@@ -24,6 +24,11 @@
 		9951D7D826EA2E61004951F4 /* firstNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9951D7D726EA2E61004951F4 /* firstNavigationViewController.swift */; };
 		996220F626EA25770004A508 /* secondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996220F526EA25770004A508 /* secondTabViewController.swift */; };
 		996220F826EA26440004A508 /* thirdTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996220F726EA26440004A508 /* thirdTabViewController.swift */; };
+		9971A7BF26F0FA12007A7A9F /* DrawingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9971A7BD26F0FA12007A7A9F /* DrawingTableViewCell.swift */; };
+		9971A7C026F0FA12007A7A9F /* DrawingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9971A7BE26F0FA12007A7A9F /* DrawingTableViewCell.xib */; };
+		999C1BB026F2363C0038C9D0 /* drawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999C1BAF26F2363C0038C9D0 /* drawView.swift */; };
+		99B505BB26F0F311000691E6 /* Drawing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99B505BA26F0F311000691E6 /* Drawing.storyboard */; };
+		99B505BD26F0F348000691E6 /* drawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B505BC26F0F348000691E6 /* drawingViewController.swift */; };
 		99FE9C4B26EF6678003C25AB /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE9C4926EF6678003C25AB /* ExampleTableViewCell.swift */; };
 		99FE9C4C26EF6678003C25AB /* ExampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FE9C4A26EF6678003C25AB /* ExampleTableViewCell.xib */; };
 		99FE9C5126EF7ACF003C25AB /* ExampleSecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE9C4F26EF7ACF003C25AB /* ExampleSecondTableViewCell.swift */; };
@@ -52,6 +57,11 @@
 		9951D7D726EA2E61004951F4 /* firstNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstNavigationViewController.swift; sourceTree = "<group>"; };
 		996220F526EA25770004A508 /* secondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondTabViewController.swift; sourceTree = "<group>"; };
 		996220F726EA26440004A508 /* thirdTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdTabViewController.swift; sourceTree = "<group>"; };
+		9971A7BD26F0FA12007A7A9F /* DrawingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingTableViewCell.swift; sourceTree = "<group>"; };
+		9971A7BE26F0FA12007A7A9F /* DrawingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawingTableViewCell.xib; sourceTree = "<group>"; };
+		999C1BAF26F2363C0038C9D0 /* drawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawView.swift; sourceTree = "<group>"; };
+		99B505BA26F0F311000691E6 /* Drawing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Drawing.storyboard; sourceTree = "<group>"; };
+		99B505BC26F0F348000691E6 /* drawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawingViewController.swift; sourceTree = "<group>"; };
 		99FE9C4926EF6678003C25AB /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		99FE9C4A26EF6678003C25AB /* ExampleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleTableViewCell.xib; sourceTree = "<group>"; };
 		99FE9C4F26EF7ACF003C25AB /* ExampleSecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleSecondTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,6 +106,7 @@
 				994D98B526E91B0300565D1C /* DebugMenu */,
 				994D98BA26E92A1000565D1C /* TabPlay */,
 				9951D7D626EA2E45004951F4 /* Navigation */,
+				99B505BE26F0F37C000691E6 /* Drawing */,
 				9942153126E26E52007F635F /* Assets.xcassets */,
 				9942153326E26E52007F635F /* LaunchScreen.storyboard */,
 				9942153626E26E52007F635F /* Info.plist */,
@@ -144,6 +155,34 @@
 				991BF9CC26EA2F60009E4D5D /* thirdNavigationViewController.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		9971A7C126F0FA17007A7A9F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9971A7C226F0FA25007A7A9F /* DrawingCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9971A7C226F0FA25007A7A9F /* DrawingCell */ = {
+			isa = PBXGroup;
+			children = (
+				9971A7BD26F0FA12007A7A9F /* DrawingTableViewCell.swift */,
+				9971A7BE26F0FA12007A7A9F /* DrawingTableViewCell.xib */,
+				999C1BAF26F2363C0038C9D0 /* drawView.swift */,
+			);
+			path = DrawingCell;
+			sourceTree = "<group>";
+		};
+		99B505BE26F0F37C000691E6 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				9971A7C126F0FA17007A7A9F /* Cell */,
+				99B505BA26F0F311000691E6 /* Drawing.storyboard */,
+				99B505BC26F0F348000691E6 /* drawingViewController.swift */,
+			);
+			path = Drawing;
 			sourceTree = "<group>";
 		};
 		99FE9C4D26EF6680003C25AB /* Example */ = {
@@ -253,12 +292,14 @@
 				991BF9C926EA2EE0009E4D5D /* Navigation.storyboard in Resources */,
 				9942153526E26E52007F635F /* LaunchScreen.storyboard in Resources */,
 				99FE9C5726EF8D2D003C25AB /* ExampleCollectionViewCell.xib in Resources */,
+				99B505BB26F0F311000691E6 /* Drawing.storyboard in Resources */,
 				99FE9C5226EF7ACF003C25AB /* ExampleSecondTableViewCell.xib in Resources */,
 				9942153226E26E52007F635F /* Assets.xcassets in Resources */,
 				9942153026E26E51007F635F /* Main.storyboard in Resources */,
 				994D98B926E927B300565D1C /* TabPlay.storyboard in Resources */,
 				99FE9C4C26EF6678003C25AB /* ExampleTableViewCell.xib in Resources */,
 				994D98B026E916F900565D1C /* DebugMenu.storyboard in Resources */,
+				9971A7C026F0FA12007A7A9F /* DrawingTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,8 +311,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				996220F626EA25770004A508 /* secondTabViewController.swift in Sources */,
+				99B505BD26F0F348000691E6 /* drawingViewController.swift in Sources */,
+				999C1BB026F2363C0038C9D0 /* drawView.swift in Sources */,
 				9942949126EF40FD00E02EEF /* Constants.swift in Sources */,
 				994D98B726E9210B00565D1C /* TabPlayViewController.swift in Sources */,
+				9971A7BF26F0FA12007A7A9F /* DrawingTableViewCell.swift in Sources */,
 				996220F826EA26440004A508 /* thirdTabViewController.swift in Sources */,
 				99FE9C5126EF7ACF003C25AB /* ExampleSecondTableViewCell.swift in Sources */,
 				99FE9C5626EF8D2D003C25AB /* ExampleCollectionViewCell.swift in Sources */,
