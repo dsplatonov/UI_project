@@ -40,4 +40,20 @@ class DebugMenuViewController: UIViewController {
         
     }
     
+    func switchToStoryboard(Storyboard:String) {
+        let storyboard = UIStoryboard(name:Storyboard, bundle: nil)
+        let changeToViewController = storyboard.instantiateInitialViewController()
+        changeToViewController?.modalPresentationStyle = .fullScreen
+        if let viewController = changeToViewController {
+            self.present(viewController, animated: true, completion: nil)
+            
+        }
+    }
+    
+    @IBAction func drawingButtonPressed(_ sender: Any) {
+        switchToStoryboard(Storyboard: "Drawing")
+        
+    }
+    
+    
 }

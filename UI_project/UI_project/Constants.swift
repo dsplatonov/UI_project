@@ -17,6 +17,7 @@ enum Constants {
         static let example: String = "ExampleCell"
         static let exampleSecond: String = "ExampleSecondCell"
         static let exampleCollection: String = "ExampleCollection"
+        static let drawing: String = "DrawingCell"
     }
     
 }
