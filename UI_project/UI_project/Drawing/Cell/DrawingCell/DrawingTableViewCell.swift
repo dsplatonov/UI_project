@@ -21,6 +21,7 @@ class DrawingTableViewCell: UITableViewCell {
         self.ImageView.layer.shadowColor = UIColor.black.cgColor
         self.ImageView.layer.shadowOffset = .init(width: 10, height: -10)
         self.ImageView.layer.shadowOpacity = 0.5
+        
     }
     
     func getTextFromLabel() -> String? {
