@@ -10,6 +10,8 @@
 		991BF9C926EA2EE0009E4D5D /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 991BF9C826EA2EE0009E4D5D /* Navigation.storyboard */; };
 		991BF9CB26EA2F34009E4D5D /* secondNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BF9CA26EA2F34009E4D5D /* secondNavigationViewController.swift */; };
 		991BF9CD26EA2F60009E4D5D /* thirdNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BF9CC26EA2F60009E4D5D /* thirdNavigationViewController.swift */; };
+		992A5E0A26FA3BFB0075E7AE /* HeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992A5E0926FA3BFB0075E7AE /* HeaderFooterView.swift */; };
+		992A5E0C26FA3C0B0075E7AE /* HeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 992A5E0B26FA3C0B0075E7AE /* HeaderFooterView.xib */; };
 		993083A126F8A00000631B17 /* PostControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993083A026F8A00000631B17 /* PostControl.swift */; };
 		9942152926E26E51007F635F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9942152826E26E51007F635F /* AppDelegate.swift */; };
 		9942152B26E26E51007F635F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9942152A26E26E51007F635F /* SceneDelegate.swift */; };
@@ -29,6 +31,9 @@
 		996220F826EA26440004A508 /* thirdTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996220F726EA26440004A508 /* thirdTabViewController.swift */; };
 		9971A7BF26F0FA12007A7A9F /* DrawingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9971A7BD26F0FA12007A7A9F /* DrawingTableViewCell.swift */; };
 		9971A7C026F0FA12007A7A9F /* DrawingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9971A7BE26F0FA12007A7A9F /* DrawingTableViewCell.xib */; };
+		997D887326FCDE71002C2490 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D887226FCDE71002C2490 /* NewsViewController.swift */; };
+		997D887726FCE40A002C2490 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D887526FCE40A002C2490 /* NewsTableViewCell.swift */; };
+		997D887826FCE40A002C2490 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D887626FCE40A002C2490 /* NewsTableViewCell.xib */; };
 		999C1BB026F2363C0038C9D0 /* drawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999C1BAF26F2363C0038C9D0 /* drawView.swift */; };
 		99B505BB26F0F311000691E6 /* Drawing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99B505BA26F0F311000691E6 /* Drawing.storyboard */; };
 		99B505BD26F0F348000691E6 /* drawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B505BC26F0F348000691E6 /* drawingViewController.swift */; };
@@ -44,6 +49,8 @@
 		991BF9C826EA2EE0009E4D5D /* Navigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
 		991BF9CA26EA2F34009E4D5D /* secondNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondNavigationViewController.swift; sourceTree = "<group>"; };
 		991BF9CC26EA2F60009E4D5D /* thirdNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdNavigationViewController.swift; sourceTree = "<group>"; };
+		992A5E0926FA3BFB0075E7AE /* HeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderFooterView.swift; sourceTree = "<group>"; };
+		992A5E0B26FA3C0B0075E7AE /* HeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderFooterView.xib; sourceTree = "<group>"; };
 		993083A026F8A00000631B17 /* PostControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostControl.swift; sourceTree = "<group>"; };
 		9942152526E26E51007F635F /* UI_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UI_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9942152826E26E51007F635F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +72,9 @@
 		996220F726EA26440004A508 /* thirdTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdTabViewController.swift; sourceTree = "<group>"; };
 		9971A7BD26F0FA12007A7A9F /* DrawingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingTableViewCell.swift; sourceTree = "<group>"; };
 		9971A7BE26F0FA12007A7A9F /* DrawingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawingTableViewCell.xib; sourceTree = "<group>"; };
+		997D887226FCDE71002C2490 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		997D887526FCE40A002C2490 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		997D887626FCE40A002C2490 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		999C1BAF26F2363C0038C9D0 /* drawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawView.swift; sourceTree = "<group>"; };
 		99B505BA26F0F311000691E6 /* Drawing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Drawing.storyboard; sourceTree = "<group>"; };
 		99B505BC26F0F348000691E6 /* drawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawingViewController.swift; sourceTree = "<group>"; };
@@ -187,13 +197,34 @@
 				9971A7BD26F0FA12007A7A9F /* DrawingTableViewCell.swift */,
 				9971A7BE26F0FA12007A7A9F /* DrawingTableViewCell.xib */,
 				999C1BAF26F2363C0038C9D0 /* drawView.swift */,
+				992A5E0926FA3BFB0075E7AE /* HeaderFooterView.swift */,
+				992A5E0B26FA3C0B0075E7AE /* HeaderFooterView.xib */,
 			);
 			path = DrawingCell;
+			sourceTree = "<group>";
+		};
+		997D887126FCDE40002C2490 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				997D887426FCE3DC002C2490 /* Cell */,
+				997D887226FCDE71002C2490 /* NewsViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		997D887426FCE3DC002C2490 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				997D887526FCE40A002C2490 /* NewsTableViewCell.swift */,
+				997D887626FCE40A002C2490 /* NewsTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		99B505BE26F0F37C000691E6 /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
+				997D887126FCDE40002C2490 /* News */,
 				9971A7C126F0FA17007A7A9F /* Cell */,
 				99B505BA26F0F311000691E6 /* Drawing.storyboard */,
 				99B505BC26F0F348000691E6 /* drawingViewController.swift */,
@@ -315,6 +346,8 @@
 				9942153226E26E52007F635F /* Assets.xcassets in Resources */,
 				9942153026E26E51007F635F /* Main.storyboard in Resources */,
 				994D98B926E927B300565D1C /* TabPlay.storyboard in Resources */,
+				992A5E0C26FA3C0B0075E7AE /* HeaderFooterView.xib in Resources */,
+				997D887826FCE40A002C2490 /* NewsTableViewCell.xib in Resources */,
 				99FE9C4C26EF6678003C25AB /* ExampleTableViewCell.xib in Resources */,
 				994D98B026E916F900565D1C /* DebugMenu.storyboard in Resources */,
 				9971A7C026F0FA12007A7A9F /* DrawingTableViewCell.xib in Resources */,
@@ -340,11 +373,14 @@
 				99FE9C5626EF8D2D003C25AB /* ExampleCollectionViewCell.swift in Sources */,
 				991BF9CB26EA2F34009E4D5D /* secondNavigationViewController.swift in Sources */,
 				9942152D26E26E51007F635F /* mainViewController.swift in Sources */,
+				997D887726FCE40A002C2490 /* NewsTableViewCell.swift in Sources */,
+				992A5E0A26FA3BFB0075E7AE /* HeaderFooterView.swift in Sources */,
 				9942152926E26E51007F635F /* AppDelegate.swift in Sources */,
 				993083A126F8A00000631B17 /* PostControl.swift in Sources */,
 				991BF9CD26EA2F60009E4D5D /* thirdNavigationViewController.swift in Sources */,
 				99FE9C4B26EF6678003C25AB /* ExampleTableViewCell.swift in Sources */,
 				9951D7D826EA2E61004951F4 /* firstNavigationViewController.swift in Sources */,
+				997D887326FCDE71002C2490 /* NewsViewController.swift in Sources */,
 				9942152B26E26E51007F635F /* SceneDelegate.swift in Sources */,
 				994D98B426E9173E00565D1C /* DebugMenuViewController.swift in Sources */,
 			);

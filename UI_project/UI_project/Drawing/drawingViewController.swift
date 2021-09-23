@@ -17,9 +17,25 @@ class drawingViewController:UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.viewControllers[0].title = "Список друзей"
         self.drawingTableView.register(UINib(nibName: "DrawingTableViewCell", bundle: nil), forCellReuseIdentifier: Constants.Cell.drawing)
+        self.drawingTableView.register(UINib(nibName: "HeaderFooterView", bundle: nil), forHeaderFooterViewReuseIdentifier: "HeaderFooterView")
+        self.putHeader()
         self.getData()
+    }
+    
+    private func putHeader(){
+        let headerView = UIView(frame: .init(x: 0, y: 0, width: self.drawingTableView.frame.width, height: 50))
+        self.drawingTableView.tableHeaderView = headerView
+        let headerTitle = UILabel()
+        headerTitle.text = "Список друзей"
+        headerTitle.font = UIFont.boldSystemFont(ofSize: 20)
+        headerTitle.translatesAutoresizingMaskIntoConstraints = false
+        headerView.addSubview(headerTitle)
+        NSLayoutConstraint.activate([
+            headerTitle.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
+            headerTitle.centerYAnchor.constraint(equalTo: headerView.centerYAnchor)
+        ])
+        
     }
     
     private func getData(){
@@ -66,9 +82,6 @@ class drawingViewController:UIViewController {
         }
         
         print(characterInSection)
-//        for index in characterInSection {
-//            print(index.value)
-//        }
         
         var charsSortedArray:[Character]=[]
         
@@ -98,12 +111,26 @@ class drawingViewController:UIViewController {
         }
     }
     
-    
-    
-    
 }
 
 extension drawingViewController: UITableViewDataSource {
+    
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 50
+//    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderFooterView") as! HeaderFooterView
+        var i:Int = 0
+        for index in sortedCharsForSection {
+            if section == i {
+                view.titleForSection.text = String(index)
+                
+            }
+            i+=1
+        }
+        return view
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var i:Int = 0
@@ -124,16 +151,16 @@ extension drawingViewController: UITableViewDataSource {
         return sortedCharsForSection.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        var i:Int = 0
-        for index in sortedCharsForSection {
-            if section == i {
-                return String(index)
-            }
-            i+=1
-        }
-        return "Title"
-        }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        var i:Int = 0
+//        for index in sortedCharsForSection {
+//            if section == i {
+//                return String(index)
+//            }
+//            i+=1
+//        }
+//        return "Title"
+//        }
     
 
     }
