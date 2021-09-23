@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Post View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="PostViewController" customModule="UI_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zYH-L7-ZQW">
+                                <rect key="frame" x="20" y="44" width="150" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1nl-ro-7Hc"/>
+                                    <constraint firstAttribute="width" constant="150" id="vz5-NW-VcK"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="okK-lX-lma">
+                                <rect key="frame" x="244" y="44" width="150" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="mE5-YG-OXO"/>
+                                    <constraint firstAttribute="width" constant="150" id="uQ1-Gv-IHg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17K-SA-IS5">
+                                <rect key="frame" x="116" y="147" width="8" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbj-6x-75P" customClass="PostControl" customModule="UI_project" customModuleProvider="target">
+                                <rect key="frame" x="140" y="144" width="20" height="20"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hear" translatesAutoresizingMaskIntoConstraints="NO" id="FS3-bc-09T">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Dk8-ES-Lu3"/>
+                                            <constraint firstAttribute="height" constant="20" id="UQf-Zl-wOT"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="FS3-bc-09T" firstAttribute="centerY" secondItem="Sbj-6x-75P" secondAttribute="centerY" id="KaF-5h-JF4"/>
+                                    <constraint firstAttribute="height" constant="20" id="fsc-YR-rGb"/>
+                                    <constraint firstAttribute="width" constant="20" id="upT-v6-MT6"/>
+                                    <constraint firstItem="FS3-bc-09T" firstAttribute="centerX" secondItem="Sbj-6x-75P" secondAttribute="centerX" id="wBe-JA-VsX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sbj-6x-75P" firstAttribute="top" secondItem="zYH-L7-ZQW" secondAttribute="bottom" id="67f-Ux-FfZ"/>
+                            <constraint firstItem="17K-SA-IS5" firstAttribute="top" secondItem="zYH-L7-ZQW" secondAttribute="bottom" constant="3" id="H6G-LY-pqj"/>
+                            <constraint firstItem="Sbj-6x-75P" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="140" id="cbV-BV-Bey"/>
+                            <constraint firstItem="zYH-L7-ZQW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="fUO-eg-bes"/>
+                            <constraint firstItem="okK-lX-lma" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="lKk-p4-Vmo"/>
+                            <constraint firstAttribute="trailing" secondItem="okK-lX-lma" secondAttribute="trailing" constant="20" id="ld4-Eb-t2d"/>
+                            <constraint firstItem="zYH-L7-ZQW" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ph4-zt-p9I"/>
+                            <constraint firstItem="17K-SA-IS5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="116" id="tde-ve-lhh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstImageView" destination="zYH-L7-ZQW" id="TPt-8x-a6H"/>
+                        <outlet property="heartImageView" destination="FS3-bc-09T" id="a3t-Qc-o3J"/>
+                        <outlet property="likeControl" destination="Sbj-6x-75P" id="slu-nT-6Dj"/>
+                        <outlet property="likesLabel" destination="17K-SA-IS5" id="vKB-eP-woe"/>
+                        <outlet property="secondImageView" destination="okK-lX-lma" id="GqN-06-Iiw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hear" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

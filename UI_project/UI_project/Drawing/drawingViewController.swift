@@ -10,13 +10,14 @@ import UIKit
 class drawingViewController:UIViewController {
     
     @IBOutlet private weak var drawingTableView: UITableView!
-    private var names:[String]=[]
-    private var charsForSection = [Character : Int]()
-    private var sortedCharsForSection:[Character]=[]
-    private var arrayForTableCell:[[String]]=[]
+    var names:[String]=[]
+    var charsForSection = [Character : Int]()
+    var sortedCharsForSection:[Character]=[]
+    var arrayForTableCell:[[String]]=[]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.viewControllers[0].title = "Список друзей"
         self.drawingTableView.register(UINib(nibName: "DrawingTableViewCell", bundle: nil), forCellReuseIdentifier: Constants.Cell.drawing)
         self.getData()
     }
@@ -86,6 +87,17 @@ class drawingViewController:UIViewController {
         self.names=name
     }
     
+    private func presentPostController(indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "UserPost", bundle: nil)
+        let viewController = storyBoard.instantiateInitialViewController()
+        if let vc = viewController as? PostViewController {
+            let userName = self.arrayForTableCell[indexPath.section][indexPath.row]
+            vc.title = "Фото пользователя \(userName)"
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }
+    }
+    
     
     
     
@@ -122,15 +134,28 @@ extension drawingViewController: UITableViewDataSource {
         }
         return "Title"
         }
-    }
     
 
+    }
+    
 
 extension drawingViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        (cell as? DrawingTableViewCell)?.configure(drawLabel: arrayForTableCell[indexPath.section][indexPath.row],imageName: "\(indexPath.section),\(indexPath.row)")
+        (cell as? DrawingTableViewCell)?.configure(
+            drawLabel: arrayForTableCell[indexPath.section][indexPath.row],
+            imageName: "\(indexPath.section),\(indexPath.row)")
 
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let selectedCell = self.drawingTableView.cellForRow(at: indexPath) as? DrawingTableViewCell
+//        if let cell = selectedCell {
+//            print(cell.getTextFromLabel())
+//        }
+        self.presentPostController(indexPath: indexPath)
+    }
+    
+    
     
 }
