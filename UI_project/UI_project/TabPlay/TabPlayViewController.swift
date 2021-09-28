@@ -43,7 +43,7 @@ class TabPlayViewController: UIViewController {
     }
     
     
-//    из предыдущего ДЗ
+//    
 //    @IBAction private func firstTabButtonPressed(_ sender: Any) {
 //        self.tabBarController?.selectedIndex = 1
 //    }
