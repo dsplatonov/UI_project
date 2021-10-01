@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animation Of Image View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="AnimationOfImageViewController" customModule="UI_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdH-xK-XEn" customClass="ImageAnimation" customModule="UI_project" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="144" width="300" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hWZ-Sw-aZ2">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="8RN-ao-Xfh"/>
+                                            <constraint firstAttribute="width" constant="300" id="HnK-QC-tjF"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ORh-KU-W1A"/>
+                                    <constraint firstAttribute="width" constant="300" id="cI0-hX-Xpo"/>
+                                    <constraint firstAttribute="trailing" secondItem="hWZ-Sw-aZ2" secondAttribute="trailing" id="ggU-eN-Xsl"/>
+                                    <constraint firstAttribute="bottom" secondItem="hWZ-Sw-aZ2" secondAttribute="bottom" id="m6v-vo-y01"/>
+                                    <constraint firstItem="hWZ-Sw-aZ2" firstAttribute="leading" secondItem="fdH-xK-XEn" secondAttribute="leading" id="tps-DQ-dqd"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KeyFrame Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoN-rc-uu0">
+                                <rect key="frame" x="128.5" y="54" width="157" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Плавное исчезновение" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0L-yE-zjt">
+                                <rect key="frame" x="114" y="494" width="186" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkl-vk-jvZ">
+                                <rect key="frame" x="182" y="555" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="57K-hS-Pwv"/>
+                                    <constraint firstAttribute="width" constant="50" id="oHr-Nz-WLO"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llq-Sf-d7n">
+                                <rect key="frame" x="178.5" y="645" width="57" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Пуск"/>
+                                <connections>
+                                    <action selector="animateOpacityButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rNn-xr-cBk"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfA-LZ-e1l" customClass="LoadingAnimationView" customModule="UI_project" customModuleProvider="target">
+                                <rect key="frame" x="182" y="696" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JqV-zD-acE"/>
+                                    <constraint firstAttribute="width" constant="50" id="lx7-hD-rlG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UfA-LZ-e1l" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3bX-dy-UIz"/>
+                            <constraint firstItem="UfA-LZ-e1l" firstAttribute="top" secondItem="llq-Sf-d7n" secondAttribute="bottom" constant="20" id="Bia-A7-9Qf"/>
+                            <constraint firstItem="gkl-vk-jvZ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="CTA-cZ-bpY"/>
+                            <constraint firstItem="fdH-xK-XEn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="GgH-EX-bwZ"/>
+                            <constraint firstItem="fdH-xK-XEn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="JuD-iA-aNg"/>
+                            <constraint firstItem="qoN-rc-uu0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="L1r-rh-GA3"/>
+                            <constraint firstItem="g0L-yE-zjt" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="PlI-aH-0wS"/>
+                            <constraint firstItem="llq-Sf-d7n" firstAttribute="top" secondItem="gkl-vk-jvZ" secondAttribute="bottom" constant="40" id="VhQ-CD-HLk"/>
+                            <constraint firstItem="llq-Sf-d7n" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ZzD-Nx-FmH"/>
+                            <constraint firstItem="gkl-vk-jvZ" firstAttribute="top" secondItem="g0L-yE-zjt" secondAttribute="bottom" constant="40" id="fXR-cc-qti"/>
+                            <constraint firstItem="qoN-rc-uu0" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="w9y-sn-SS5"/>
+                            <constraint firstItem="g0L-yE-zjt" firstAttribute="top" secondItem="fdH-xK-XEn" secondAttribute="bottom" constant="50" id="yAp-Gv-3Pd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationOfImageView" destination="hWZ-Sw-aZ2" id="fQy-5X-spj"/>
+                        <outlet property="loadingAnimation" destination="UfA-LZ-e1l" id="hR1-4r-Vcq"/>
+                        <outlet property="loadingAnimationView" destination="gkl-vk-jvZ" id="32W-29-HG1"/>
+                        <outlet property="viewForControl" destination="fdH-xK-XEn" id="MfK-2S-4E4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -60,5 +60,14 @@ class AnimationViewController: UIViewController {
         
     }
 
+    @IBAction func imagesButtonPressed(_ sender: Any) {
+        let storyBoard = UIStoryboard.init(name: "AnimationOfImages", bundle: nil)
+        let vc = storyBoard.instantiateInitialViewController()
+        vc?.modalPresentationStyle = .fullScreen
+        if let animationImagesViewController = vc {
+            self.present(animationImagesViewController, animated: true, completion: nil)
+        }
+        
+    }
     
 }
