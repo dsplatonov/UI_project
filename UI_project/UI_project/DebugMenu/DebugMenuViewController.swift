@@ -55,5 +55,11 @@ class DebugMenuViewController: UIViewController {
         
     }
     
+
+    @IBAction func animationButtonPressed(_ sender: Any) {
+        switchToStoryboard(Storyboard: "Animation")
+    }
+    
+    
     
 }
