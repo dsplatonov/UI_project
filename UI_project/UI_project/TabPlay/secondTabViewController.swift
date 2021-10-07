@@ -34,7 +34,6 @@ class secondTabViewController: UIViewController {
     
     
     
-//  Из предыдущего ДЗ
 //    @IBAction private func secondButtonePressed(_ sender: Any) {
 //
 //        self.tabBarController?.selectedIndex = 2
@@ -77,14 +76,14 @@ extension secondTabViewController: UICollectionViewDelegateFlowLayout {
         let totalInset = inset * 2
         let contentSize = self.CollectionView.frame.width - totalInset
         let rowWidth = contentSize/rows
-        
+
         return .init(width: rowWidth, height: height)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 5
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 5
     }
