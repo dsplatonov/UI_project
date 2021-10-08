@@ -21,9 +21,9 @@ class AnimationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        firstViewForLoadingAnimation.alpha = 0
-        secondViewForLoadingAnimation.alpha = 0
-        thirdViewForLoadingAnimation.alpha = 0
+        self.firstViewForLoadingAnimation.alpha = 0
+        self.secondViewForLoadingAnimation.alpha = 0
+        self.thirdViewForLoadingAnimation.alpha = 0
         let newMask = CAShapeLayer()
         let circlePath = UIBezierPath(ovalIn: .init(x: 0, y: 0, width: 50, height: 50))
         newMask.path = circlePath.cgPath
@@ -70,4 +70,26 @@ class AnimationViewController: UIViewController {
         
     }
     
+    @IBAction func presentViewAnimationButtonPressed(_ sender: Any) {
+        
+        let storyBoard = UIStoryboard.init(name: "CustomViewPresent", bundle: nil)
+        let viewController = storyBoard.instantiateInitialViewController()
+        viewController?.transitioningDelegate = self
+        if let vc = viewController {
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    
 }
+
+extension AnimationViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return ViewControllerDismisser(endFrame: .init(x: 0, y: 0, width: 300, height: 300))
+    }
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return ViewControllerPresenter(startFrame: .init(x: 0, y: 0, width: 300, height: 300))
+    }
+}
+
+

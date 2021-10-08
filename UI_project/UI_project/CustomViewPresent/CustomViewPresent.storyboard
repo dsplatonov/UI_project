@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LJu-on-6oe">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom View Present View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="CustomViewPresentViewController" customModule="UI_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PR-Wr-ZuZ">
+                                <rect key="frame" x="138" y="432.5" width="138" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Вернуться назад"/>
+                                <connections>
+                                    <action selector="returnViewButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LPd-j5-xJ9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXd-JH-t7G">
+                                <rect key="frame" x="48.5" y="513.5" width="317" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Перейти на следующую Navigation вкладку"/>
+                                <connections>
+                                    <action selector="navigationAnimationButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YyK-d6-mQc"/>
+                                    <segue destination="dsk-R5-ASn" kind="show" id="ke0-PL-ZUD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4PR-Wr-ZuZ" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="D1n-Zw-bzG"/>
+                            <constraint firstItem="4PR-Wr-ZuZ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="FnT-Nm-O0B"/>
+                            <constraint firstItem="cXd-JH-t7G" firstAttribute="top" secondItem="4PR-Wr-ZuZ" secondAttribute="bottom" constant="50" id="Jtt-SM-g6a"/>
+                            <constraint firstItem="cXd-JH-t7G" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="pIL-kf-N75"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wvi-bW-M1X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="65.625"/>
+        </scene>
+        <!--Navigation Animation View Controller-->
+        <scene sceneID="wSn-q4-flh">
+            <objects>
+                <viewController id="dsk-R5-ASn" customClass="NavigationAnimationViewController" customModule="UI_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bZ5-KE-rh0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnt-O8-Khg">
+                                <rect key="frame" x="138.5" y="432.5" width="137.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Вернуться назад"/>
+                                <connections>
+                                    <action selector="returnButtonPressed:" destination="dsk-R5-ASn" eventType="touchUpInside" id="5ML-cs-dvk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yl3-UP-y9G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fnt-O8-Khg" firstAttribute="centerY" secondItem="bZ5-KE-rh0" secondAttribute="centerY" id="KBr-WQ-Phi"/>
+                            <constraint firstItem="fnt-O8-Khg" firstAttribute="centerX" secondItem="bZ5-KE-rh0" secondAttribute="centerX" id="MZd-T8-cHz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="J0o-Gp-MnB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rt4-w2-gy9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1916" y="66"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Y0Q-hS-QXu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LJu-on-6oe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rhX-aK-1vV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="dTw-0r-g61"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ye-Wd-CpL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
