@@ -54,6 +54,9 @@
 		999C1BB026F2363C0038C9D0 /* drawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999C1BAF26F2363C0038C9D0 /* drawView.swift */; };
 		99B505BB26F0F311000691E6 /* Drawing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99B505BA26F0F311000691E6 /* Drawing.storyboard */; };
 		99B505BD26F0F348000691E6 /* drawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B505BC26F0F348000691E6 /* drawingViewController.swift */; };
+		99ECF753270F388200E777DB /* NavigationAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECF752270F388200E777DB /* NavigationAnimationViewController.swift */; };
+		99ECF756270F57EC00E777DB /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECF755270F57EC00E777DB /* PopAnimator.swift */; };
+		99ECF758270F580C00E777DB /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECF757270F580C00E777DB /* PushAnimator.swift */; };
 		99FE9C4B26EF6678003C25AB /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE9C4926EF6678003C25AB /* ExampleTableViewCell.swift */; };
 		99FE9C4C26EF6678003C25AB /* ExampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FE9C4A26EF6678003C25AB /* ExampleTableViewCell.xib */; };
 		99FE9C5126EF7ACF003C25AB /* ExampleSecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE9C4F26EF7ACF003C25AB /* ExampleSecondTableViewCell.swift */; };
@@ -112,6 +115,9 @@
 		999C1BAF26F2363C0038C9D0 /* drawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawView.swift; sourceTree = "<group>"; };
 		99B505BA26F0F311000691E6 /* Drawing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Drawing.storyboard; sourceTree = "<group>"; };
 		99B505BC26F0F348000691E6 /* drawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawingViewController.swift; sourceTree = "<group>"; };
+		99ECF752270F388200E777DB /* NavigationAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAnimationViewController.swift; sourceTree = "<group>"; };
+		99ECF755270F57EC00E777DB /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
+		99ECF757270F580C00E777DB /* PushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
 		99FE9C4926EF6678003C25AB /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		99FE9C4A26EF6678003C25AB /* ExampleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleTableViewCell.xib; sourceTree = "<group>"; };
 		99FE9C4F26EF7ACF003C25AB /* ExampleSecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleSecondTableViewCell.swift; sourceTree = "<group>"; };
@@ -314,8 +320,10 @@
 		99998A38270B6C9C008C0760 /* CustomViewPresent */ = {
 			isa = PBXGroup;
 			children = (
+				99ECF754270F57D000E777DB /* Push and Pop animators */,
 				99998A39270B6CCD008C0760 /* CustomViewPresentViewController.swift */,
 				99998A3B270B6CE1008C0760 /* CustomViewPresent.storyboard */,
+				99ECF752270F388200E777DB /* NavigationAnimationViewController.swift */,
 			);
 			path = CustomViewPresent;
 			sourceTree = "<group>";
@@ -330,6 +338,15 @@
 				9947330026F4E0F50022B6AD /* Post */,
 			);
 			path = Drawing;
+			sourceTree = "<group>";
+		};
+		99ECF754270F57D000E777DB /* Push and Pop animators */ = {
+			isa = PBXGroup;
+			children = (
+				99ECF755270F57EC00E777DB /* PopAnimator.swift */,
+				99ECF757270F580C00E777DB /* PushAnimator.swift */,
+			);
+			path = "Push and Pop animators";
 			sourceTree = "<group>";
 		};
 		99FE9C4D26EF6680003C25AB /* Example */ = {
@@ -468,12 +485,14 @@
 				994732FF26F4E0E30022B6AD /* PostViewController.swift in Sources */,
 				996220F626EA25770004A508 /* secondTabViewController.swift in Sources */,
 				99B505BD26F0F348000691E6 /* drawingViewController.swift in Sources */,
+				99ECF753270F388200E777DB /* NavigationAnimationViewController.swift in Sources */,
 				999C1BB026F2363C0038C9D0 /* drawView.swift in Sources */,
 				996494AA270711BB00C42EDF /* ImageAnimation.swift in Sources */,
 				9942949126EF40FD00E02EEF /* Constants.swift in Sources */,
 				994D98B726E9210B00565D1C /* TabPlayViewController.swift in Sources */,
 				9971A7BF26F0FA12007A7A9F /* DrawingTableViewCell.swift in Sources */,
 				99660439270317390023EBA2 /* likeAnimation.swift in Sources */,
+				99ECF756270F57EC00E777DB /* PopAnimator.swift in Sources */,
 				996220F826EA26440004A508 /* thirdTabViewController.swift in Sources */,
 				99FE9C5126EF7ACF003C25AB /* ExampleSecondTableViewCell.swift in Sources */,
 				99FE9C5626EF8D2D003C25AB /* ExampleCollectionViewCell.swift in Sources */,
@@ -482,6 +501,7 @@
 				997FCE112702226300FADE8F /* AnimationViewController.swift in Sources */,
 				99998A34270B51C2008C0760 /* ViewControllerPresenter.swift in Sources */,
 				997D887726FCE40A002C2490 /* NewsTableViewCell.swift in Sources */,
+				99ECF758270F580C00E777DB /* PushAnimator.swift in Sources */,
 				997FCE1627022C1C00FADE8F /* loadingAnimationView.swift in Sources */,
 				992A5E0A26FA3BFB0075E7AE /* HeaderFooterView.swift in Sources */,
 				9942152926E26E51007F635F /* AppDelegate.swift in Sources */,

@@ -24,5 +24,18 @@ class CustomViewPresentViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func navigationAnimationButtonPressed(_ sender: Any) {
+        let vc = NavigationAnimationViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        
+        
+//        if let navigationAnimationViewController = self.navigationController?.viewControllers[0] {
+//            self.navigationController?.popToViewController(navigationAnimationViewController, animated: true)
+//        }
+        
+    }
+    
+    
 
 }

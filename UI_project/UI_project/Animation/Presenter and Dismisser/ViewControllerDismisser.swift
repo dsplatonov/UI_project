@@ -26,7 +26,7 @@ class ViewControllerDismisser: NSObject, UIViewControllerAnimatedTransitioning {
         
         let containerViewFrame = transitionContext.containerView.frame
         
-        let sourceViewTargetFrame = CGRect(x: 0, y: -containerViewFrame.height, width: source.view.frame.width, height: source.view.frame.height)
+        let sourceViewTargetFrame = CGRect(x: 0, y: containerViewFrame.height, width: source.view.frame.width, height: source.view.frame.height)
 //        let destinationViewTargetFrame = source.view.frame
 //
 //        transitionContext.containerView.addSubview(destination.view)
