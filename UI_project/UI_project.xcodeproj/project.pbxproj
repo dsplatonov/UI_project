@@ -35,6 +35,8 @@
 		996494AC27072AA400C42EDF /* LoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996494AB27072AA400C42EDF /* LoadingAnimationView.swift */; };
 		9966043727030EB90023EBA2 /* avatarPushingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9966043627030EB90023EBA2 /* avatarPushingAnimation.swift */; };
 		99660439270317390023EBA2 /* likeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99660438270317390023EBA2 /* likeAnimation.swift */; };
+		9969B0AA2714753B009545CE /* PresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969B0A92714753B009545CE /* PresentationAnimator.swift */; };
+		9969B0AC271478CF009545CE /* SmoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969B0AB271478CF009545CE /* SmoothViewController.swift */; };
 		9971A7BF26F0FA12007A7A9F /* DrawingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9971A7BD26F0FA12007A7A9F /* DrawingTableViewCell.swift */; };
 		9971A7C026F0FA12007A7A9F /* DrawingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9971A7BE26F0FA12007A7A9F /* DrawingTableViewCell.xib */; };
 		997D887326FCDE71002C2490 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D887226FCDE71002C2490 /* NewsViewController.swift */; };
@@ -96,6 +98,8 @@
 		996494AB27072AA400C42EDF /* LoadingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationView.swift; sourceTree = "<group>"; };
 		9966043627030EB90023EBA2 /* avatarPushingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avatarPushingAnimation.swift; sourceTree = "<group>"; };
 		99660438270317390023EBA2 /* likeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = likeAnimation.swift; sourceTree = "<group>"; };
+		9969B0A92714753B009545CE /* PresentationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAnimator.swift; sourceTree = "<group>"; };
+		9969B0AB271478CF009545CE /* SmoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothViewController.swift; sourceTree = "<group>"; };
 		9971A7BD26F0FA12007A7A9F /* DrawingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingTableViewCell.swift; sourceTree = "<group>"; };
 		9971A7BE26F0FA12007A7A9F /* DrawingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawingTableViewCell.xib; sourceTree = "<group>"; };
 		997D887226FCDE71002C2490 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -324,6 +328,8 @@
 				99998A39270B6CCD008C0760 /* CustomViewPresentViewController.swift */,
 				99998A3B270B6CE1008C0760 /* CustomViewPresent.storyboard */,
 				99ECF752270F388200E777DB /* NavigationAnimationViewController.swift */,
+				9969B0A92714753B009545CE /* PresentationAnimator.swift */,
+				9969B0AB271478CF009545CE /* SmoothViewController.swift */,
 			);
 			path = CustomViewPresent;
 			sourceTree = "<group>";
@@ -495,6 +501,7 @@
 				99ECF756270F57EC00E777DB /* PopAnimator.swift in Sources */,
 				996220F826EA26440004A508 /* thirdTabViewController.swift in Sources */,
 				99FE9C5126EF7ACF003C25AB /* ExampleSecondTableViewCell.swift in Sources */,
+				9969B0AC271478CF009545CE /* SmoothViewController.swift in Sources */,
 				99FE9C5626EF8D2D003C25AB /* ExampleCollectionViewCell.swift in Sources */,
 				991BF9CB26EA2F34009E4D5D /* secondNavigationViewController.swift in Sources */,
 				9942152D26E26E51007F635F /* mainViewController.swift in Sources */,
@@ -508,6 +515,7 @@
 				998D3E7F2704BEFA00C96138 /* AnimationImagesViewController.swift in Sources */,
 				998D3E852704C34300C96138 /* AnimationImagesCollectionViewCell.swift in Sources */,
 				993083A126F8A00000631B17 /* PostControl.swift in Sources */,
+				9969B0AA2714753B009545CE /* PresentationAnimator.swift in Sources */,
 				991BF9CD26EA2F60009E4D5D /* thirdNavigationViewController.swift in Sources */,
 				99FE9C4B26EF6678003C25AB /* ExampleTableViewCell.swift in Sources */,
 				9966043727030EB90023EBA2 /* avatarPushingAnimation.swift in Sources */,

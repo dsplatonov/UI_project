@@ -33,13 +33,23 @@
                                     <segue destination="dsk-R5-ASn" kind="show" id="ke0-PL-ZUD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ek7-kY-wE3">
+                                <rect key="frame" x="86.5" y="584.5" width="241.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Посмотреть плавную анимацию"/>
+                                <connections>
+                                    <segue destination="5dP-UY-EN4" kind="show" id="2nt-s6-jh0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ek7-kY-wE3" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="9yg-eb-17z"/>
                             <constraint firstItem="4PR-Wr-ZuZ" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="D1n-Zw-bzG"/>
                             <constraint firstItem="4PR-Wr-ZuZ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="FnT-Nm-O0B"/>
                             <constraint firstItem="cXd-JH-t7G" firstAttribute="top" secondItem="4PR-Wr-ZuZ" secondAttribute="bottom" constant="50" id="Jtt-SM-g6a"/>
+                            <constraint firstItem="ek7-kY-wE3" firstAttribute="top" secondItem="cXd-JH-t7G" secondAttribute="bottom" constant="40" id="fwe-9J-aME"/>
                             <constraint firstItem="cXd-JH-t7G" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="pIL-kf-N75"/>
                         </constraints>
                     </view>
@@ -48,6 +58,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="65.625"/>
+        </scene>
+        <!--Smooth View Controller-->
+        <scene sceneID="uhV-56-2EA">
+            <objects>
+                <viewController id="5dP-UY-EN4" customClass="SmoothViewController" customModule="UI_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ef5-ZJ-XAX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhN-Ly-D5I">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="0dd-qv-vn6"/>
+                                    <constraint firstAttribute="height" constant="128" id="GeT-gT-EjL"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnJ-Fb-zIt">
+                                <rect key="frame" x="134" y="612" width="146" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Начать анимацию"/>
+                                <connections>
+                                    <action selector="smoothButtonPressed:" destination="5dP-UY-EN4" eventType="touchUpInside" id="vFZ-Bp-O2C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="omj-bb-NCD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QhN-Ly-D5I" firstAttribute="centerX" secondItem="ef5-ZJ-XAX" secondAttribute="centerX" id="8CY-jq-gwj"/>
+                            <constraint firstItem="QhN-Ly-D5I" firstAttribute="centerY" secondItem="ef5-ZJ-XAX" secondAttribute="centerY" id="AKO-xk-U1j"/>
+                            <constraint firstItem="vnJ-Fb-zIt" firstAttribute="top" secondItem="QhN-Ly-D5I" secondAttribute="bottom" constant="100" id="bQ6-5H-q0W"/>
+                            <constraint firstItem="vnJ-Fb-zIt" firstAttribute="centerX" secondItem="ef5-ZJ-XAX" secondAttribute="centerX" id="rD3-0P-vNy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yjv-eO-PYO"/>
+                    <connections>
+                        <outlet property="smoothView" destination="ef5-ZJ-XAX" id="RVK-ts-exz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KEj-3e-Yum" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="807"/>
         </scene>
         <!--Navigation Animation View Controller-->
         <scene sceneID="wSn-q4-flh">
@@ -101,6 +154,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
