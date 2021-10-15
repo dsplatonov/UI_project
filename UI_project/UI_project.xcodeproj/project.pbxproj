@@ -29,6 +29,9 @@
 		9951D7D826EA2E61004951F4 /* firstNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9951D7D726EA2E61004951F4 /* firstNavigationViewController.swift */; };
 		996220F626EA25770004A508 /* secondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996220F526EA25770004A508 /* secondTabViewController.swift */; };
 		996220F826EA26440004A508 /* thirdTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996220F726EA26440004A508 /* thirdTabViewController.swift */; };
+		9964025C2719D9520015CA09 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9964025B2719D9520015CA09 /* NavigationViewController.swift */; };
+		9964025E2719DD590015CA09 /* CustomPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9964025D2719DD590015CA09 /* CustomPushAnimator.swift */; };
+		996402602719E0E40015CA09 /* CustomPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9964025F2719E0E40015CA09 /* CustomPopAnimator.swift */; };
 		996494A62706EC1800C42EDF /* AnimationOfImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996494A52706EC1800C42EDF /* AnimationOfImageViewController.swift */; };
 		996494A82706EC3800C42EDF /* AnimationOfImages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 996494A72706EC3800C42EDF /* AnimationOfImages.storyboard */; };
 		996494AA270711BB00C42EDF /* ImageAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996494A9270711BB00C42EDF /* ImageAnimation.swift */; };
@@ -49,6 +52,7 @@
 		998D3E812704BF1500C96138 /* AnimationImages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 998D3E802704BF1500C96138 /* AnimationImages.storyboard */; };
 		998D3E852704C34300C96138 /* AnimationImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998D3E832704C34300C96138 /* AnimationImagesCollectionViewCell.swift */; };
 		998D3E862704C34300C96138 /* AnimationImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998D3E842704C34300C96138 /* AnimationImagesCollectionViewCell.xib */; };
+		99979A4B2719B535000E5CCB /* CustomInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99979A4A2719B535000E5CCB /* CustomInteractiveTransition.swift */; };
 		99998A34270B51C2008C0760 /* ViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99998A33270B51C2008C0760 /* ViewControllerPresenter.swift */; };
 		99998A37270B5D3A008C0760 /* ViewControllerDismisser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99998A36270B5D3A008C0760 /* ViewControllerDismisser.swift */; };
 		99998A3A270B6CCD008C0760 /* CustomViewPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99998A39270B6CCD008C0760 /* CustomViewPresentViewController.swift */; };
@@ -92,6 +96,9 @@
 		9951D7D726EA2E61004951F4 /* firstNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstNavigationViewController.swift; sourceTree = "<group>"; };
 		996220F526EA25770004A508 /* secondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondTabViewController.swift; sourceTree = "<group>"; };
 		996220F726EA26440004A508 /* thirdTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdTabViewController.swift; sourceTree = "<group>"; };
+		9964025B2719D9520015CA09 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		9964025D2719DD590015CA09 /* CustomPushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPushAnimator.swift; sourceTree = "<group>"; };
+		9964025F2719E0E40015CA09 /* CustomPopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopAnimator.swift; sourceTree = "<group>"; };
 		996494A52706EC1800C42EDF /* AnimationOfImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationOfImageViewController.swift; sourceTree = "<group>"; };
 		996494A72706EC3800C42EDF /* AnimationOfImages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnimationOfImages.storyboard; sourceTree = "<group>"; };
 		996494A9270711BB00C42EDF /* ImageAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnimation.swift; sourceTree = "<group>"; };
@@ -112,6 +119,7 @@
 		998D3E802704BF1500C96138 /* AnimationImages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnimationImages.storyboard; sourceTree = "<group>"; };
 		998D3E832704C34300C96138 /* AnimationImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		998D3E842704C34300C96138 /* AnimationImagesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationImagesCollectionViewCell.xib; sourceTree = "<group>"; };
+		99979A4A2719B535000E5CCB /* CustomInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInteractiveTransition.swift; sourceTree = "<group>"; };
 		99998A33270B51C2008C0760 /* ViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenter.swift; sourceTree = "<group>"; };
 		99998A36270B5D3A008C0760 /* ViewControllerDismisser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDismisser.swift; sourceTree = "<group>"; };
 		99998A39270B6CCD008C0760 /* CustomViewPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewPresentViewController.swift; sourceTree = "<group>"; };
@@ -330,6 +338,8 @@
 				99ECF752270F388200E777DB /* NavigationAnimationViewController.swift */,
 				9969B0A92714753B009545CE /* PresentationAnimator.swift */,
 				9969B0AB271478CF009545CE /* SmoothViewController.swift */,
+				99979A4A2719B535000E5CCB /* CustomInteractiveTransition.swift */,
+				9964025B2719D9520015CA09 /* NavigationViewController.swift */,
 			);
 			path = CustomViewPresent;
 			sourceTree = "<group>";
@@ -351,6 +361,8 @@
 			children = (
 				99ECF755270F57EC00E777DB /* PopAnimator.swift */,
 				99ECF757270F580C00E777DB /* PushAnimator.swift */,
+				9964025D2719DD590015CA09 /* CustomPushAnimator.swift */,
+				9964025F2719E0E40015CA09 /* CustomPopAnimator.swift */,
 			);
 			path = "Push and Pop animators";
 			sourceTree = "<group>";
@@ -490,18 +502,21 @@
 			files = (
 				994732FF26F4E0E30022B6AD /* PostViewController.swift in Sources */,
 				996220F626EA25770004A508 /* secondTabViewController.swift in Sources */,
+				9964025C2719D9520015CA09 /* NavigationViewController.swift in Sources */,
 				99B505BD26F0F348000691E6 /* drawingViewController.swift in Sources */,
 				99ECF753270F388200E777DB /* NavigationAnimationViewController.swift in Sources */,
 				999C1BB026F2363C0038C9D0 /* drawView.swift in Sources */,
 				996494AA270711BB00C42EDF /* ImageAnimation.swift in Sources */,
 				9942949126EF40FD00E02EEF /* Constants.swift in Sources */,
 				994D98B726E9210B00565D1C /* TabPlayViewController.swift in Sources */,
+				99979A4B2719B535000E5CCB /* CustomInteractiveTransition.swift in Sources */,
 				9971A7BF26F0FA12007A7A9F /* DrawingTableViewCell.swift in Sources */,
 				99660439270317390023EBA2 /* likeAnimation.swift in Sources */,
 				99ECF756270F57EC00E777DB /* PopAnimator.swift in Sources */,
 				996220F826EA26440004A508 /* thirdTabViewController.swift in Sources */,
 				99FE9C5126EF7ACF003C25AB /* ExampleSecondTableViewCell.swift in Sources */,
 				9969B0AC271478CF009545CE /* SmoothViewController.swift in Sources */,
+				996402602719E0E40015CA09 /* CustomPopAnimator.swift in Sources */,
 				99FE9C5626EF8D2D003C25AB /* ExampleCollectionViewCell.swift in Sources */,
 				991BF9CB26EA2F34009E4D5D /* secondNavigationViewController.swift in Sources */,
 				9942152D26E26E51007F635F /* mainViewController.swift in Sources */,
@@ -519,6 +534,7 @@
 				991BF9CD26EA2F60009E4D5D /* thirdNavigationViewController.swift in Sources */,
 				99FE9C4B26EF6678003C25AB /* ExampleTableViewCell.swift in Sources */,
 				9966043727030EB90023EBA2 /* avatarPushingAnimation.swift in Sources */,
+				9964025E2719DD590015CA09 /* CustomPushAnimator.swift in Sources */,
 				9951D7D826EA2E61004951F4 /* firstNavigationViewController.swift in Sources */,
 				997D887326FCDE71002C2490 /* NewsViewController.swift in Sources */,
 				99998A3A270B6CCD008C0760 /* CustomViewPresentViewController.swift in Sources */,

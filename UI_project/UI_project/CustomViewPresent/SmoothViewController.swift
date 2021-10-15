@@ -15,7 +15,7 @@ class SmoothViewController: UIViewController {
     
     private lazy var controller: UIViewController = {
         let vc = UIViewController()
-        vc.view.backgroundColor = .systemRed
+        vc.view.backgroundColor = .systemOrange
         vc.transitioningDelegate = self
         return vc
     }()
@@ -25,11 +25,11 @@ class SmoothViewController: UIViewController {
         self.animator = .init(startFrame: self.smoothView.frame, destinationController: self.controller, sourceController: self)
     }
     
-    @IBAction func smoothButtonPressed(_ sender: Any) {
-        
-        self.present(self.controller,animated: true)
-        
-    }
+//    @IBAction func smoothButtonPressed(_ sender: Any) {
+//        
+//        self.present(self.controller,animated: true)
+//        
+//    }
 }
 
 extension SmoothViewController: UIViewControllerTransitioningDelegate {

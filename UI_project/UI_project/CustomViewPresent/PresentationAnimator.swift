@@ -55,19 +55,21 @@ class PresentationAnimator: UIPercentDrivenInteractiveTransition, UIViewControll
         switch pan.state {
         case .began:
             self.sourceController.present(destinationController,animated: true)
+            print(1)
         case .changed:
             
             let translation = abs(pan.translation(in: sourceController.view).y)
             let percent = (2 * translation)/sourceController.view.frame.height
             self.shouldEnd = percent > 0.5
             self.update(percent)
-            
         case .ended:
             self.shouldEnd ? self.finish() : self.cancel()
             self.hasStarted = false
+            print(3)
         case .cancelled:
             self.hasStarted = false
             self.cancel()
+            print(4)
         default: break
             
         }
