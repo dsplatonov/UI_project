@@ -16,6 +16,8 @@ class mainViewController: UIViewController {
     // делаем аутлет для поля пароль
     @IBOutlet private weak var passwordTextField: UITextField!
 
+//  расшариваем singleton
+    let session = Session.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,7 +95,7 @@ class mainViewController: UIViewController {
         let login = loginTextField.text
         let pass = passwordTextField.text
         //проверяем логин и пароль
-        if login == "" && pass == "" {
+        if login == "s" && pass == "" {
             self.showDebugScene()
         } else {
             self.showAuthAlert()
