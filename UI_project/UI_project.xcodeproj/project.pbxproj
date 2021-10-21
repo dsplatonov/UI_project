@@ -38,6 +38,7 @@
 		996494AC27072AA400C42EDF /* LoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996494AB27072AA400C42EDF /* LoadingAnimationView.swift */; };
 		9966043727030EB90023EBA2 /* avatarPushingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9966043627030EB90023EBA2 /* avatarPushingAnimation.swift */; };
 		99660439270317390023EBA2 /* likeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99660438270317390023EBA2 /* likeAnimation.swift */; };
+		996729BF271D897700774E18 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996729BE271D897700774E18 /* Session.swift */; };
 		9969B0AA2714753B009545CE /* PresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969B0A92714753B009545CE /* PresentationAnimator.swift */; };
 		9969B0AC271478CF009545CE /* SmoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969B0AB271478CF009545CE /* SmoothViewController.swift */; };
 		9971A7BF26F0FA12007A7A9F /* DrawingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9971A7BD26F0FA12007A7A9F /* DrawingTableViewCell.swift */; };
@@ -105,6 +106,7 @@
 		996494AB27072AA400C42EDF /* LoadingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationView.swift; sourceTree = "<group>"; };
 		9966043627030EB90023EBA2 /* avatarPushingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avatarPushingAnimation.swift; sourceTree = "<group>"; };
 		99660438270317390023EBA2 /* likeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = likeAnimation.swift; sourceTree = "<group>"; };
+		996729BE271D897700774E18 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		9969B0A92714753B009545CE /* PresentationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAnimator.swift; sourceTree = "<group>"; };
 		9969B0AB271478CF009545CE /* SmoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothViewController.swift; sourceTree = "<group>"; };
 		9971A7BD26F0FA12007A7A9F /* DrawingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingTableViewCell.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			children = (
 				9942152C26E26E51007F635F /* mainViewController.swift */,
 				9942152E26E26E51007F635F /* Main.storyboard */,
+				996729BE271D897700774E18 /* Session.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				99998A3A270B6CCD008C0760 /* CustomViewPresentViewController.swift in Sources */,
 				9942152B26E26E51007F635F /* SceneDelegate.swift in Sources */,
 				996494AC27072AA400C42EDF /* LoadingAnimationView.swift in Sources */,
+				996729BF271D897700774E18 /* Session.swift in Sources */,
 				996494A62706EC1800C42EDF /* AnimationOfImageViewController.swift in Sources */,
 				99998A37270B5D3A008C0760 /* ViewControllerDismisser.swift in Sources */,
 				994D98B426E9173E00565D1C /* DebugMenuViewController.swift in Sources */,
