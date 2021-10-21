@@ -48,6 +48,14 @@
                                     <action selector="animationButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fnM-66-PLw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5z-2b-991">
+                                <rect key="frame" x="158" y="231.5" width="98" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Зайти в ВК"/>
+                                <connections>
+                                    <action selector="loginToVkButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eU3-ys-c1N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -55,9 +63,11 @@
                             <constraint firstItem="9PQ-X1-31m" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="FiS-bx-Xwy"/>
                             <constraint firstItem="vcl-A3-aaS" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Fyd-EB-4z0"/>
                             <constraint firstItem="9TV-Zh-vMc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="L3H-0o-Sgj"/>
+                            <constraint firstItem="yg5-lP-WZM" firstAttribute="top" secondItem="F5z-2b-991" secondAttribute="bottom" constant="70" id="N9I-hP-FJc"/>
                             <constraint firstItem="yg5-lP-WZM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Xs1-oA-1Rp"/>
                             <constraint firstItem="yg5-lP-WZM" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-100" id="lK6-4K-Tjd"/>
                             <constraint firstItem="9PQ-X1-31m" firstAttribute="top" secondItem="9TV-Zh-vMc" secondAttribute="bottom" constant="51" id="ozg-RT-e0S"/>
+                            <constraint firstItem="F5z-2b-991" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="sHa-y5-9ML"/>
                             <constraint firstItem="9TV-Zh-vMc" firstAttribute="top" secondItem="vcl-A3-aaS" secondAttribute="bottom" constant="67.5" id="trA-JH-QIn"/>
                             <constraint firstItem="vcl-A3-aaS" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="xxs-dA-wZ1"/>
                         </constraints>

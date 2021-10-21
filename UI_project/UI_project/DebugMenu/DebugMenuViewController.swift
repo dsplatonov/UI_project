@@ -60,6 +60,9 @@ class DebugMenuViewController: UIViewController {
         switchToStoryboard(Storyboard: "Animation")
     }
     
+    @IBAction func loginToVkButtonPressed(_ sender: Any) {
+        switchToStoryboard(Storyboard: "LoginToVk")
+    }
     
     
 }
