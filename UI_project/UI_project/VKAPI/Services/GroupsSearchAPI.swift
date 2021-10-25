@@ -7,10 +7,7 @@
 
 import Foundation
 import Alamofire
-
-struct SearchResult {
-    
-}
+import SwiftyJSON
 
 final class GroupsSearchAPI {
     
@@ -20,9 +17,9 @@ final class GroupsSearchAPI {
     let userId = String(Session.shared.userId)
     let version = "5.81"
     let type = "group"
-    let count = "2"
+    let count = "10"
     
-    func searchGroups(query: String, completion: @escaping([SearchResult])->()) {
+    func searchGroups(query: String, completion: @escaping([GroupSearch])->()) {
         
         let parameters: Parameters = [
             "access_token": token,
@@ -35,7 +32,20 @@ final class GroupsSearchAPI {
         let url = baseUrl + method
         
         AF.request(url, method: .get, parameters: parameters).responseJSON(completionHandler: { response in
-            print("Response: \(response.value)")
+//            print("Response: \(response.value)")
+            guard let data = response.data else { return }
+            debugPrint(data.prettyJSON)
+            
+            do {
+                //navigating with SwiftyJSON
+                let searchData = try JSON(data)["response"]["items"].rawData()
+                let searchResults = try JSONDecoder().decode([GroupSearch].self, from: searchData)
+//                debugPrint("Search Results: \(searchResults)")
+                completion(searchResults)
+            } catch {
+                debugPrint(error)
+            }
+            
         })
     }
     

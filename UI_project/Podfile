@@ -6,6 +6,7 @@ target 'UI_project' do
   use_frameworks!
 
 pod 'Alamofire', '~> 5.4'
+pod 'SwiftyJSON', '~> 5.0.1'
 
   # Pods for UI_project
 

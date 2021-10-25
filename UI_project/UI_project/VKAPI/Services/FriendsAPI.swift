@@ -7,10 +7,7 @@
 
 import Foundation
 import Alamofire
-
-struct Friend {
-    
-}
+import SwiftyJSON
 
 final class FriendsAPI {
     
@@ -19,7 +16,7 @@ final class FriendsAPI {
     let userId = String(Session.shared.userId)
     let version = "5.81"
     let method = "/friends.get"
-    let count = "2"
+    let count = "10"
     let fields = "nickname, domain, sex, bdate"
     let order = "hints"
     
@@ -36,7 +33,23 @@ final class FriendsAPI {
         let url = baseUrl + method
         
         AF.request(url, method: .get, parameters: parameters).responseJSON(completionHandler: { response in
-            print("Response: \(response.value)")
+//            print("Response: \(response.value)")
+            
+            guard let data = response.data else { return }
+            debugPrint(data.prettyJSON)
+            
+            do {
+                //navigating with SwiftyJSON
+                let itemsData = try JSON(data)["response"]["items"].rawData()
+                let friends = try JSONDecoder().decode([Friend].self, from: itemsData)
+//                debugPrint("Friends: \(friends)")
+                completion(friends)
+                
+            } catch {
+                debugPrint(error)
+            }
+            
+            
         })
         
     }
