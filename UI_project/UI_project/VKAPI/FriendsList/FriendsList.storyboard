@@ -53,19 +53,42 @@
                                     <action selector="searchGroupsButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wFV-No-BOV"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K0k-ip-PhP">
+                                <rect key="frame" x="20" y="536" width="374" height="326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tuT-dB-bjF">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tuT-dB-bjF" id="wxU-IV-Xy2">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="WnB-Cf-731"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="Ymo-W3-8Hm"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yDe-TK-jQh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="50P-fe-Vwk"/>
                             <constraint firstItem="MT6-2S-JAQ" firstAttribute="top" secondItem="CiG-lN-HC1" secondAttribute="bottom" constant="50" id="9VD-J1-b2J"/>
+                            <constraint firstItem="K0k-ip-PhP" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="BuA-Xk-3sU"/>
                             <constraint firstItem="JT6-FC-Aj1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="D9T-yP-GdD"/>
                             <constraint firstItem="JT6-FC-Aj1" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="I61-00-oiL"/>
+                            <constraint firstItem="K0k-ip-PhP" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Q7s-aA-oy7"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JT6-FC-Aj1" secondAttribute="trailing" constant="20" id="cLD-gc-Ewm"/>
                             <constraint firstItem="CiG-lN-HC1" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="eSS-ak-oDB"/>
+                            <constraint firstItem="K0k-ip-PhP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="fHg-dh-L7Y"/>
+                            <constraint firstItem="K0k-ip-PhP" firstAttribute="top" secondItem="yDe-TK-jQh" secondAttribute="bottom" constant="34" id="fuZ-KX-PjZ"/>
                             <constraint firstItem="JT6-FC-Aj1" firstAttribute="top" secondItem="CwG-6t-6Kq" secondAttribute="bottom" constant="50" id="lfX-dB-LvU"/>
                             <constraint firstItem="CwG-6t-6Kq" firstAttribute="top" secondItem="MT6-2S-JAQ" secondAttribute="bottom" constant="50" id="p7P-dY-ufW"/>
                             <constraint firstItem="MT6-2S-JAQ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="pW4-DO-SPm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="K0k-ip-PhP" secondAttribute="trailing" constant="20" id="rgg-6a-qcC"/>
                             <constraint firstItem="CiG-lN-HC1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="sVu-Fi-vbb"/>
                             <constraint firstItem="yDe-TK-jQh" firstAttribute="top" secondItem="JT6-FC-Aj1" secondAttribute="bottom" constant="50" id="uVx-FC-3DT"/>
                             <constraint firstItem="CwG-6t-6Kq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ukV-pe-j4j"/>
@@ -73,11 +96,12 @@
                     </view>
                     <connections>
                         <outlet property="searchTextField" destination="JT6-FC-Aj1" id="3w6-6H-7iA"/>
+                        <outlet property="tableWithResults" destination="K0k-ip-PhP" id="bxC-Uh-lPm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="71"/>
+            <point key="canvasLocation" x="131.8840579710145" y="70.982142857142847"/>
         </scene>
     </scenes>
     <resources>
