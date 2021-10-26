@@ -6,15 +6,16 @@
 //
 
 import Foundation
+import RealmSwift
 
 // MARK: - GroupSearch
-struct GroupSearch: Codable {
-    let isMember, id: Int
-    let photo100: String
-    let isAdvertiser, isAdmin: Int
-    let photo50, photo200: String
-    let type, screenName, name: String
-    let isClosed: Int
+class GroupSearch: Object, Codable {
+    @objc dynamic var isMember, id: Int
+    @objc dynamic var photo100: String
+    @objc dynamic var isAdvertiser, isAdmin: Int
+    @objc dynamic var photo50, photo200: String
+    @objc dynamic var type, screenName, name: String
+    @objc dynamic var isClosed: Int
 
     enum CodingKeys: String, CodingKey {
         case isMember = "is_member"

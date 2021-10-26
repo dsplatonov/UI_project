@@ -5,17 +5,16 @@
 //  Created by Дмитрий on 22.10.2021.
 //
 
-
-
 import Foundation
+import RealmSwift
 
 // MARK: - Friend
-struct Friend: Codable {
-    let bdate: String?
-    let id: Int
-    let lastName: String
-    let sex: Int
-    let firstName: String
+class Friend: Object, Codable {
+    @objc dynamic var bdate: String?
+    @objc dynamic var id: Int
+    @objc dynamic var lastName: String
+    @objc dynamic var sex: Int
+    @objc dynamic var firstName: String
 
     enum CodingKeys: String, CodingKey {
         case bdate, id

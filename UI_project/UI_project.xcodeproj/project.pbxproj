@@ -13,6 +13,8 @@
 		992A5E0A26FA3BFB0075E7AE /* HeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992A5E0926FA3BFB0075E7AE /* HeaderFooterView.swift */; };
 		992A5E0C26FA3C0B0075E7AE /* HeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 992A5E0B26FA3C0B0075E7AE /* HeaderFooterView.xib */; };
 		993083A126F8A00000631B17 /* PostControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993083A026F8A00000631B17 /* PostControl.swift */; };
+		993A444427282E5C00037674 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 993A444327282E5C00037674 /* Realm */; };
+		993A444627282E5C00037674 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 993A444527282E5C00037674 /* RealmSwift */; };
 		9942152926E26E51007F635F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9942152826E26E51007F635F /* AppDelegate.swift */; };
 		9942152B26E26E51007F635F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9942152A26E26E51007F635F /* SceneDelegate.swift */; };
 		9942152D26E26E51007F635F /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9942152C26E26E51007F635F /* mainViewController.swift */; };
@@ -77,6 +79,7 @@
 		99ECF753270F388200E777DB /* NavigationAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECF752270F388200E777DB /* NavigationAnimationViewController.swift */; };
 		99ECF756270F57EC00E777DB /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECF755270F57EC00E777DB /* PopAnimator.swift */; };
 		99ECF758270F580C00E777DB /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECF757270F580C00E777DB /* PushAnimator.swift */; };
+		99F14FAE2727F0F800BC0A8F /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 99F14FAD2727F0F800BC0A8F /* SwiftKeychainWrapper */; };
 		99FE9C4B26EF6678003C25AB /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE9C4926EF6678003C25AB /* ExampleTableViewCell.swift */; };
 		99FE9C4C26EF6678003C25AB /* ExampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FE9C4A26EF6678003C25AB /* ExampleTableViewCell.xib */; };
 		99FE9C5126EF7ACF003C25AB /* ExampleSecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE9C4F26EF7ACF003C25AB /* ExampleSecondTableViewCell.swift */; };
@@ -175,6 +178,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				993A444627282E5C00037674 /* RealmSwift in Frameworks */,
+				993A444427282E5C00037674 /* Realm in Frameworks */,
+				99F14FAE2727F0F800BC0A8F /* SwiftKeychainWrapper in Frameworks */,
 				FEBD8E3FB36562200F6770F0 /* Pods_UI_project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +551,11 @@
 			dependencies = (
 			);
 			name = UI_project;
+			packageProductDependencies = (
+				99F14FAD2727F0F800BC0A8F /* SwiftKeychainWrapper */,
+				993A444327282E5C00037674 /* Realm */,
+				993A444527282E5C00037674 /* RealmSwift */,
+			);
 			productName = UI_project;
 			productReference = 9942152526E26E51007F635F /* UI_project.app */;
 			productType = "com.apple.product-type.application";
@@ -574,6 +585,8 @@
 			);
 			mainGroup = 9942151C26E26E51007F635F;
 			packageReferences = (
+				99F14FAC2727F0F800BC0A8F /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+				993A444227282E5C00037674 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 9942152626E26E51007F635F /* Products */;
 			projectDirPath = "";
@@ -938,6 +951,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		993A444227282E5C00037674 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		99F14FAC2727F0F800BC0A8F /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		993A444327282E5C00037674 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 993A444227282E5C00037674 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		993A444527282E5C00037674 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 993A444227282E5C00037674 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		99F14FAD2727F0F800BC0A8F /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99F14FAC2727F0F800BC0A8F /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9942151D26E26E51007F635F /* Project object */;
 }

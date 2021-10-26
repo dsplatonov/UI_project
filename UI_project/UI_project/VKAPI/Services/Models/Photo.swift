@@ -10,39 +10,30 @@
 //   let photos = try? newJSONDecoder().decode(Photos.self, from: jsonData)
 
 import Foundation
-
-//// MARK: - Photos
-//struct Photos: Codable {
-//    let response: Response
-//}
-//
-//// MARK: - Response
-//struct Response: Codable {
-//    let count: Int
-//    let items: [Item]
-//}
+import RealmSwift
 
 // MARK: - Photo
-struct Photo: Codable {
-    let albumID, id, date: Int
-    let postID: Int?
-    let text: String
-    let sizes: [Size]
-    let hasTags: Bool
-    let ownerID: Int
+class Photo: Object, Codable {
+    @objc dynamic var albumID, id, date: Int
+    @objc dynamic var postID: Int
+    @objc dynamic var text: String
+//    @objc dynamic var sizes: [Size]
+    @objc dynamic var hasTags: Bool
+    @objc dynamic var ownerID: Int
 
     enum CodingKeys: String, CodingKey {
         case albumID = "album_id"
         case postID = "post_id"
-        case id, date, text, sizes
+        case id, date, text
+//        case sizes
         case hasTags = "has_tags"
         case ownerID = "owner_id"
     }
 }
 
 // MARK: - Size
-struct Size: Codable {
-    let width, height: Int
-    let url: String
-    let type: String
-}
+//class Size: Object, Codable {
+//    @objc dynamic var width, height: Int
+//    @objc dynamic var url: String
+//    @objc dynamic var type: String
+//}
