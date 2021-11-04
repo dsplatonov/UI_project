@@ -5,20 +5,19 @@
 //  Created by Дмитрий on 25.10.2021.
 //
 
-
-
 import Foundation
+import RealmSwift
 
 // MARK: - Group
-struct Group: Codable {
-    let id, isClosed, isAdvertiser: Int
-    let type: String
-    let isMember: Int
-    let city: City?
-    let photo50, photo200: String
-    let isAdmin: Int
-    let photo100: String
-    let name, screenName: String
+class Group: Object, Codable {
+    @objc dynamic var id, isClosed, isAdvertiser: Int
+    @objc dynamic var type: String
+    @objc dynamic var isMember: Int
+//    @objc dynamic var city: City
+    @objc dynamic var photo50, photo200: String
+    @objc dynamic var isAdmin: Int
+    @objc dynamic var photo100: String
+    @objc dynamic var name, screenName: String
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -26,7 +25,7 @@ struct Group: Codable {
         case isAdvertiser = "is_advertiser"
         case type
         case isMember = "is_member"
-        case city
+//        case city
         case photo50 = "photo_50"
         case photo200 = "photo_200"
         case isAdmin = "is_admin"
@@ -37,7 +36,7 @@ struct Group: Codable {
 }
 
 // MARK: - City
-struct City: Codable {
-    let id: Int
-    let title: String
-}
+//class City: Object, Codable {
+//    @objc dynamic var id: Int
+//    @objc dynamic var title: String
+//}

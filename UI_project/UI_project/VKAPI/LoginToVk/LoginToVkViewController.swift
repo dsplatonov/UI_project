@@ -19,6 +19,18 @@ class LoginToVkViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if !Session.shared.token.isEmpty, Session.shared.userId > 0 {
+            self.changeStoryboard()
+            return
+        }
+        
         self.authorizeToVKAPI()
     }
     
@@ -73,6 +85,12 @@ class LoginToVkViewController: UIViewController, WKNavigationDelegate {
         guard let savedUserId = Int(userId) else { return }
         Session.shared.userId = Int(savedUserId)
         
+        self.changeStoryboard()
+        
+        decisionHandler(.cancel)
+            }
+    
+    func changeStoryboard() {
         //Navigating to new storyboard
         let storyBoard = UIStoryboard(name: "FriendsList", bundle: nil)
         let changeToViewController = storyBoard.instantiateInitialViewController()
@@ -80,8 +98,6 @@ class LoginToVkViewController: UIViewController, WKNavigationDelegate {
         guard let vc = changeToViewController else { return }
         self.present(vc, animated: true, completion: nil)
         
-        
-        decisionHandler(.cancel)
-            }
+    }
     }
     

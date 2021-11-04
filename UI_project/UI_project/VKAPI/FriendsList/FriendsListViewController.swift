@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FriendsListViewController: UIViewController {
 
@@ -24,6 +25,8 @@ class FriendsListViewController: UIViewController {
     
     private let groupsSearchService = GroupsSearchAPI()
     private var searchResults: [GroupSearch] = []
+    
+    private var resultsList:[GroupSearch] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,9 +66,28 @@ class FriendsListViewController: UIViewController {
     
     @IBAction func searchGroupsButtonPressed(_ sender: Any) {
         
+
+        
         let searchQuery = searchTextField.text ?? "Test"
         groupsSearchService.searchGroups(query: searchQuery, completion: { searchResults in
-            self.searchResults = searchResults
+            
+            //Using Realm for uploading and downloading
+            
+            let realmConfiguration = Realm.Configuration(schemaVersion: 3)
+            let realm = try! Realm(configuration: realmConfiguration)
+            realm.beginWrite()
+            
+            for i in searchResults {
+                realm.add(i)
+            }
+            try! realm.commitWrite()
+            
+            let resultsList = realm.objects(GroupSearch.self)
+            
+            for i in resultsList {
+                self.searchResults.append(i)
+            }
+        
             self.tableWithResults.reloadData()
             print("Search completed")
         })
@@ -107,6 +129,7 @@ extension FriendsListViewController: UITableViewDataSource {
         //Group Search API
         let currentSearchResult = searchResults[indexPath.row]
         cell.textLabel?.text = currentSearchResult.name
+        
         return cell
     }
     
