@@ -19,6 +19,7 @@ final class PhotosAPI {
     let extended = "0"
     let count = "10"
     let albums = "0"
+    let photosDB = PhotoDatabase()
     
     func getPhotos(completion: @escaping([Photo])->()) {
         
@@ -42,6 +43,19 @@ final class PhotosAPI {
                 //navigating with SwiftyJSON
                 let photoData = try JSON(data)["response"]["items"].rawData()
                 let photos = try JSONDecoder().decode([Photo].self, from: photoData)
+                
+                // deleting old photos from database
+                let oldPhotos = self.photosDB.read()
+                oldPhotos.forEach {
+                    self.photosDB.delete($0)
+                }
+                
+                // adding fresh list of photos
+                
+                photos.forEach {
+                    self.photosDB.create($0)
+                }
+                
                 debugPrint("PHOTOS: \(photos)")
                 completion(photos)
             } catch {

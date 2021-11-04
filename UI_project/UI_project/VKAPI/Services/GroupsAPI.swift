@@ -20,6 +20,8 @@ class GroupsAPI {
     let fields = "city, activity, verified"
     let count = "10"
     
+    let groupDB = GroupDatabase()
+    
     func getGroups(completion: @escaping([Group])->()){
         
         let parameters: Parameters = [
@@ -40,6 +42,18 @@ class GroupsAPI {
                 //navigating with SwiftyJSON
                 let groupData = try JSON(data)["response"]["items"].rawData()
                 let groups = try JSONDecoder().decode([Group].self, from: groupData)
+                
+                //deleting old groups from database
+                let oldGroups = self.groupDB.read()
+                oldGroups.forEach {
+                    self.groupDB.delete($0)
+                }
+                
+                //adding new groups to the database
+                groups.forEach {
+                    self.groupDB.create($0)
+                }
+                
 //                debugPrint("Groups: \(groups)")
                 completion(groups)
             } catch {

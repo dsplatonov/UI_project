@@ -19,6 +19,8 @@ final class GroupsSearchAPI {
     let type = "group"
     let count = "10"
     
+    let groupSearchDB = GroupSearchDatabase()
+    
     func searchGroups(query: String, completion: @escaping([GroupSearch])->()) {
         
         let parameters: Parameters = [
@@ -40,6 +42,18 @@ final class GroupsSearchAPI {
                 //navigating with SwiftyJSON
                 let searchData = try JSON(data)["response"]["items"].rawData()
                 let searchResults = try JSONDecoder().decode([GroupSearch].self, from: searchData)
+                
+                //deleting old search results from database
+                let oldSearchResults = self.groupSearchDB.read()
+                oldSearchResults.forEach {
+                    self.groupSearchDB.delete($0)
+                }
+                
+                //adding new search results
+                searchResults.forEach {
+                    self.groupSearchDB.create($0)
+                }
+                
 //                debugPrint("Search Results: \(searchResults)")
                 completion(searchResults)
             } catch {
