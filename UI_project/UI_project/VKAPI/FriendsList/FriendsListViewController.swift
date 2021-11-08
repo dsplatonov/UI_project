@@ -24,7 +24,7 @@ class FriendsListViewController: UIViewController {
     private var groups: [Group] = []
     
     private let groupsSearchService = GroupsSearchAPI()
-    private var searchResults: [GroupSearch] = []
+    private var searchResults: Results<GroupSearch>?
     
     private var resultsList:[GroupSearch] = []
     
@@ -32,6 +32,8 @@ class FriendsListViewController: UIViewController {
     private let photosDB = PhotoDatabase()
     private let groupsDB = GroupDatabase()
     private let groupSearchDB = GroupSearchDatabase()
+    
+    private var token: NotificationToken?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,34 +99,38 @@ class FriendsListViewController: UIViewController {
         let searchQuery = searchTextField.text ?? "Test"
         groupsSearchService.searchGroups(query: searchQuery, completion: { [weak self] searchResults in
             
+            guard let self = self else { return }
+            
             //getting search results from database
-            if let newSearchResults = self?.groupSearchDB.read() {
-                self?.searchResults = newSearchResults
+//            if let newSearchResults = self.groupSearchDB.read() {
+//                self.searchResults = newSearchResults
+//            }
+            
+            self.searchResults = self.groupSearchDB.read()
+            
+            self.token = self.searchResults?.observe { [weak self] changes in
+                guard let self = self else { return }
+                
+                switch changes {
+                case .initial:
+                    self.tableWithResults.reloadData()
+                case .update(_, let deletions, let insertions, let modifications):
+                    self.tableWithResults.beginUpdates()
+                    self.tableWithResults.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0)}), with: .automatic)
+                    self.tableWithResults.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0)}), with: .automatic)
+                    self.tableWithResults.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0)}), with: .automatic)
+                    self.tableWithResults.endUpdates()
+                case .error(let error):
+                    fatalError("\(error)")
+                }
+                
+                
+                
             }
             
-            //Using Realm for uploading and downloading
-            
-//            let realmConfiguration = Realm.Configuration(schemaVersion: 3)
-//            let realm = try! Realm(configuration: realmConfiguration)
-//            realm.beginWrite()
-//
-//            for i in searchResults {
-//                realm.add(i)
-//            }
-//            try! realm.commitWrite()
-//
-//            let resultsList = realm.objects(GroupSearch.self)
-//
-//            for i in resultsList {
-//                self.searchResults.append(i)
-//            }
-            
-//            for i in self.searchResults {
-//                self.searchResults.append(i)
-//            }
             
         
-            self?.tableWithResults.reloadData()
+            self.tableWithResults.reloadData()
             print("Search completed")
         })
         
@@ -145,6 +151,7 @@ extension FriendsListViewController: UITableViewDataSource {
 //        return groups.count
         
         //Group Search API case
+        guard let searchResults = searchResults else { return 0 }
         return searchResults.count
     }
     
@@ -176,8 +183,8 @@ extension FriendsListViewController: UITableViewDataSource {
 //        cell.textLabel?.text = currentGroup.name
         
         //Group Search API
-        let currentSearchResult = searchResults[indexPath.row]
-        cell.textLabel?.text = currentSearchResult.name
+        let currentSearchResult = searchResults?[indexPath.row]
+        cell.textLabel?.text = currentSearchResult?.name
         
         return cell
     }
