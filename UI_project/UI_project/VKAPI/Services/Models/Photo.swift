@@ -15,15 +15,17 @@ import RealmSwift
 // MARK: - Photo
 class Photo: Object, Codable {
     @objc dynamic var albumID, id, date: Int
-    @objc dynamic var postID: Int
+//    let postID = RealmOptional<Int>()
+//    @objc dynamic var postID: Int
     @objc dynamic var text: String
+//    let sizes = List<Size>()
 //    @objc dynamic var sizes: [Size]
     @objc dynamic var hasTags: Bool
     @objc dynamic var ownerID: Int
 
     enum CodingKeys: String, CodingKey {
         case albumID = "album_id"
-        case postID = "post_id"
+//        case postID = "post_id"
         case id, date, text
 //        case sizes
         case hasTags = "has_tags"
@@ -33,6 +35,12 @@ class Photo: Object, Codable {
 
 // MARK: - Size
 //class Size: Object, Codable {
+//
+//    var width = RealmOptional<Int>()
+//    var height = RealmOptional<Int>()
+//    @objc dynamic var url: String?
+//    @objc dynamic var type: String?
+    
 //    @objc dynamic var width, height: Int
 //    @objc dynamic var url: String
 //    @objc dynamic var type: String
