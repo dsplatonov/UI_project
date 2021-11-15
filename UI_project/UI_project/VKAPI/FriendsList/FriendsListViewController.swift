@@ -29,6 +29,9 @@ class FriendsListViewController: UIViewController {
     
     private var resultsList:[GroupSearch] = []
     
+    private var newsfeedService = NewsfeedAPI()
+    private var newsfeed: [News] = []
+    
     private let friendDB = FriendDatabase()
     private let photosDB = PhotoDatabase()
     private let groupsDB = GroupDatabase()
@@ -96,9 +99,6 @@ class FriendsListViewController: UIViewController {
     }
     
     @IBAction func searchGroupsButtonPressed(_ sender: Any) {
-        
-
-        
         let searchQuery = searchTextField.text ?? "Test"
         groupsSearchService.searchGroups(query: searchQuery, completion: { [weak self] searchResults in
             
@@ -126,18 +126,23 @@ class FriendsListViewController: UIViewController {
                 case .error(let error):
                     fatalError("\(error)")
                 }
-                
-                
-                
             }
-            
-            
-        
             self.tableWithResults.reloadData()
             print("Search completed")
         })
         
     }
+    
+    @IBAction func getNewsButtonPressed(_ sender: Any) {
+        newsfeedService.getNews(completion: { news in
+            self.newsfeed = news
+            self.tableWithResults.reloadData()
+        })
+        
+        
+    }
+    
+    
 
 }
 
@@ -151,11 +156,14 @@ extension FriendsListViewController: UITableViewDataSource {
 //        return photos.count
         
         //Groups API case
-        return groups.count
+//        return groups.count
         
         //Group Search API case
 //        guard let searchResults = searchResults else { return 0 }
 //        return searchResults.count
+        
+        //Newsfeed API
+        return newsfeed.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -179,27 +187,31 @@ extension FriendsListViewController: UITableViewDataSource {
 //        cell.textLabel?.text = String(currentPhoto.text)
         
         //GroupAPI
-        let currentGroup = groups[indexPath.row]
-        
-        let photoURL = URL(string: currentGroup.photo100)
-        let data = try? Data(contentsOf: photoURL!)
-        cell.imageView?.image = UIImage(data: data!)
-        cell.textLabel?.text = currentGroup.name
-        
-        let userId = Session.shared.userId
-        
-        var groupsList: [String] = []
-        self.groups.forEach {
-            groupsList.append($0.name)
-        }
-        
-        let firebaseUser = UserFirebase(id: String(userId), groups: groupsList)
-        firebaseRef.setValue(firebaseUser.toAnyObject())
+//        let currentGroup = groups[indexPath.row]
+//
+//        let photoURL = URL(string: currentGroup.photo100)
+//        let data = try? Data(contentsOf: photoURL!)
+//        cell.imageView?.image = UIImage(data: data!)
+//        cell.textLabel?.text = currentGroup.name
+//
+//        let userId = Session.shared.userId
+//
+//        var groupsList: [String] = []
+//        self.groups.forEach {
+//            groupsList.append($0.name)
+//        }
+//
+//        let firebaseGroup = GroupFirebase(id: String(userId), groups: groupsList)
+//        firebaseRef.setValue(firebaseGroup.toAnyObject())
         
         
         //Group Search API
 //        let currentSearchResult = searchResults?[indexPath.row]
 //        cell.textLabel?.text = currentSearchResult?.name
+        
+        //Newsfeed API
+        let currentNews = newsfeed[indexPath.row]
+        cell.textLabel?.text = currentNews.text
         
         return cell
     }

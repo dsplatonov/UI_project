@@ -10,7 +10,7 @@ import Firebase
 
 class UserFirebase {
     
-    let id: String
+    let id: String?
     var groups: [String]?
     
     let ref: DatabaseReference?
@@ -42,7 +42,8 @@ class UserFirebase {
     
     func toAnyObject() -> [AnyHashable: Any] {
         return ["id": id,
-                "groups": [groups]] as [AnyHashable: Any]
+                "groups": groups
+        ] as [AnyHashable: Any]
     }
     
     func addGroup(group: String) {
