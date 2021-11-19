@@ -7,8 +7,13 @@
 
 import UIKit
 import WebKit
+import Firebase
 
 class LoginToVkViewController: UIViewController, WKNavigationDelegate {
+    
+//    let authService = Auth.auth()
+    
+    let firebaseRef = Database.database().reference(withPath: "Users")
 
     @IBOutlet var webView: WKWebView! {
         didSet {
@@ -20,16 +25,14 @@ class LoginToVkViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        if !Session.shared.token.isEmpty, Session.shared.userId > 0 {
-            self.changeStoryboard()
-            return
-        }
+//        if !Session.shared.token.isEmpty, Session.shared.userId > 0 {
+//            self.changeStoryboard()
+//            return
+//        }
         
         self.authorizeToVKAPI()
     }
@@ -80,6 +83,14 @@ class LoginToVkViewController: UIViewController, WKNavigationDelegate {
         guard let token = params["access_token"], let userId = params["user_id"] else { return }
         print("Token: \(token)")
         print("User ID: \(userId)")
+        
+        //adding to firebase database
+        let firebaseUser = UserFirebase(id: userId)
+//        let userFirebaseContainer = self.firebaseRef.child("Id")
+//        userFirebaseContainer.setValue(firebaseUser.toAnyObject())
+        
+        self.firebaseRef.setValue(firebaseUser.toAnyObject())
+        
         
         Session.shared.token = token
         guard let savedUserId = Int(userId) else { return }

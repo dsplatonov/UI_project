@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import Firebase
 
 class FriendsListViewController: UIViewController {
 
@@ -34,6 +35,8 @@ class FriendsListViewController: UIViewController {
     private let groupSearchDB = GroupSearchDatabase()
     
     private var token: NotificationToken?
+    
+    let firebaseRef = Database.database().reference(withPath: "Groups")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,11 +151,11 @@ extension FriendsListViewController: UITableViewDataSource {
 //        return photos.count
         
         //Groups API case
-//        return groups.count
+        return groups.count
         
         //Group Search API case
-        guard let searchResults = searchResults else { return 0 }
-        return searchResults.count
+//        guard let searchResults = searchResults else { return 0 }
+//        return searchResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -176,15 +179,27 @@ extension FriendsListViewController: UITableViewDataSource {
 //        cell.textLabel?.text = String(currentPhoto.text)
         
         //GroupAPI
-//        let currentGroup = groups[indexPath.row]
-//        var photoURL = URL(string: currentGroup.photo100)
-//        let data = try? Data(contentsOf: photoURL!)
-//        cell.imageView?.image = UIImage(data: data!)
-//        cell.textLabel?.text = currentGroup.name
+        let currentGroup = groups[indexPath.row]
+        
+        let photoURL = URL(string: currentGroup.photo100)
+        let data = try? Data(contentsOf: photoURL!)
+        cell.imageView?.image = UIImage(data: data!)
+        cell.textLabel?.text = currentGroup.name
+        
+        let userId = Session.shared.userId
+        
+        var groupsList: [String] = []
+        self.groups.forEach {
+            groupsList.append($0.name)
+        }
+        
+        let firebaseUser = UserFirebase(id: String(userId), groups: groupsList)
+        firebaseRef.setValue(firebaseUser.toAnyObject())
+        
         
         //Group Search API
-        let currentSearchResult = searchResults?[indexPath.row]
-        cell.textLabel?.text = currentSearchResult?.name
+//        let currentSearchResult = searchResults?[indexPath.row]
+//        cell.textLabel?.text = currentSearchResult?.name
         
         return cell
     }
