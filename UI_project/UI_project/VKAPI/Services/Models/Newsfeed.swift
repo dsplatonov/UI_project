@@ -59,7 +59,7 @@ struct News: Codable {
     let text: String
     let canDoubtCategory: Bool
 //    let attachments: [Attachment]
-    let markedAsAds, postID: Int
+    let postID: Int
 //    let views: Comments
 
     enum CodingKeys: String, CodingKey {
@@ -71,7 +71,7 @@ struct News: Codable {
         case sourceID = "source_id"
         case text
         case canDoubtCategory = "can_doubt_category"
-        case markedAsAds = "marked_as_ads"
+//        case markedAsAds = "marked_as_ads"
         case postID = "post_id"
     }
 }

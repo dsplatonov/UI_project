@@ -138,12 +138,7 @@ class FriendsListViewController: UIViewController {
             self.newsfeed = news
             self.tableWithResults.reloadData()
         })
-        
-        
     }
-    
-    
-
 }
 
 extension FriendsListViewController: UITableViewDataSource {
@@ -211,6 +206,7 @@ extension FriendsListViewController: UITableViewDataSource {
         
         //Newsfeed API
         let currentNews = newsfeed[indexPath.row]
+//        cell.textLabel?.text = String(currentNews.postID)
         cell.textLabel?.text = currentNews.text
         
         return cell
