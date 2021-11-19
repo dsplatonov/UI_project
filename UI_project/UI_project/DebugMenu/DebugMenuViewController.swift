@@ -6,11 +6,23 @@
 //
 
 import UIKit
+import Firebase
 
 class DebugMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Testing reading from Firebase database
+        let ref = Database.database().reference().child("Users/id")
+        ref.getData(completion: { error, snapshot in
+            guard error == nil else {
+                debugPrint(error!.localizedDescription)
+                return
+            }
+            debugPrint("Database Snapshot: \(snapshot.value as? String)")
+        })
+        
     }
     
     
