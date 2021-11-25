@@ -139,6 +139,19 @@ class FriendsListViewController: UIViewController {
             self.tableWithResults.reloadData()
         })
     }
+    
+    @IBAction func newsfeedButtonPressed(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "NewsFeed", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController()
+        vc?.modalPresentationStyle = .fullScreen
+        if let vc = vc {
+            self.present(vc, animated: true, completion: nil)
+        }
+        
+    }
+    
+    
 }
 
 extension FriendsListViewController: UITableViewDataSource {
