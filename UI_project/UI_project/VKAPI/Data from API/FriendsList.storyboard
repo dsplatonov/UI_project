@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -72,19 +72,29 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghS-tq-UvI">
-                                <rect key="frame" x="165" y="64" width="84.5" height="31"/>
+                                <rect key="frame" x="148.5" y="64" width="117" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Get news"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Get news here"/>
                                 <connections>
                                     <action selector="getNewsButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Jkj-7X-9vM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQ5-vu-Nia">
+                                <rect key="frame" x="285.5" y="64" width="108.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Get news -&gt;"/>
+                                <connections>
+                                    <action selector="newsfeedButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="csW-JK-a6B"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CQ5-vu-Nia" secondAttribute="trailing" constant="20" id="2mb-QY-nGI"/>
                             <constraint firstItem="yDe-TK-jQh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="50P-fe-Vwk"/>
                             <constraint firstItem="ghS-tq-UvI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="6DL-fs-Kor"/>
+                            <constraint firstItem="CQ5-vu-Nia" firstAttribute="leading" secondItem="ghS-tq-UvI" secondAttribute="trailing" constant="20" id="8LG-VT-O3J"/>
                             <constraint firstItem="MT6-2S-JAQ" firstAttribute="top" secondItem="CiG-lN-HC1" secondAttribute="bottom" constant="50" id="9VD-J1-b2J"/>
                             <constraint firstItem="K0k-ip-PhP" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="BuA-Xk-3sU"/>
                             <constraint firstItem="JT6-FC-Aj1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="D9T-yP-GdD"/>
@@ -101,6 +111,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="K0k-ip-PhP" secondAttribute="trailing" constant="20" id="rgg-6a-qcC"/>
                             <constraint firstItem="CiG-lN-HC1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="sVu-Fi-vbb"/>
                             <constraint firstItem="yDe-TK-jQh" firstAttribute="top" secondItem="JT6-FC-Aj1" secondAttribute="bottom" constant="50" id="uVx-FC-3DT"/>
+                            <constraint firstItem="CQ5-vu-Nia" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="uaN-RG-Ywb"/>
                             <constraint firstItem="CwG-6t-6Kq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ukV-pe-j4j"/>
                         </constraints>
                     </view>

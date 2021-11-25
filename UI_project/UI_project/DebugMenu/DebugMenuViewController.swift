@@ -76,5 +76,15 @@ class DebugMenuViewController: UIViewController {
         switchToStoryboard(Storyboard: "LoginToVk")
     }
     
+    @IBAction func crashesButtonPressed(_ sender: Any) {
+        
+        debugPrint("Crash test started")
+        for index in 0...UInt.max {
+            let string = NSString(format: "test + %d", index)
+            debugPrint(string)
+        }
+        debugPrint("Crash test ended before crash happens")
+        
+    }
     
 }
