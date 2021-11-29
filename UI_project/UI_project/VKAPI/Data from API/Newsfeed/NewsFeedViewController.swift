@@ -12,6 +12,8 @@ class NewsFeedViewController: UIViewController {
     @IBOutlet private var newsFeedTableView: UITableView!
     private var newsFeedService = NewsfeedAPI()
     private var news: [News] = []
+    private var groups: [NewsfeedGroup] = []
+    private var profiles: [NewsfeedProfile] = []
     
     private enum NewsFeedContents {
         case text
@@ -23,7 +25,7 @@ class NewsFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.getData()
+        self.getData()
         
         self.newsFeedTableView.register(UINib(nibName: "NewsTextTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsTextTableViewCell")
         self.newsFeedTableView.register(UINib(nibName: "NewsPhotoTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsPhotoTableViewCell")
@@ -36,13 +38,18 @@ class NewsFeedViewController: UIViewController {
     
     func getData() {
         
-        self.newsFeedService.getNews(completion: { [weak self] news in
+        self.newsFeedService.getNews(completion: { [weak self] news, groups, profiles in
             guard let self = self else { return }
             self.news = news
+            self.groups = groups
+            self.profiles = profiles
+            
+            debugPrint(self.news, self.groups, self.profiles)
+            
             if news.count > 0 {
                 
             }
-            self.newsFeedTableView.reloadData()
+//            self.newsFeedTableView.reloadData()
         })
         
         

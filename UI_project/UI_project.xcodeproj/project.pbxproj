@@ -95,6 +95,8 @@
 		99AC85AC274E8D16006A9D51 /* NewsLikesAndCommentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99AC85AA274E8D16006A9D51 /* NewsLikesAndCommentsTableViewCell.xib */; };
 		99AC85AE274E9534006A9D51 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AC85AD274E9533006A9D51 /* NewsFeedViewController.swift */; };
 		99AC85B0274E954E006A9D51 /* NewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99AC85AF274E954E006A9D51 /* NewsFeed.storyboard */; };
+		99B3A6C0275504E500202518 /* NewsfeedGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B3A6BF275504E500202518 /* NewsfeedGroup.swift */; };
+		99B3A6C22755064500202518 /* NewsfeedProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B3A6C12755064500202518 /* NewsfeedProfile.swift */; };
 		99B505BB26F0F311000691E6 /* Drawing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99B505BA26F0F311000691E6 /* Drawing.storyboard */; };
 		99B505BD26F0F348000691E6 /* drawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B505BC26F0F348000691E6 /* drawingViewController.swift */; };
 		99C0C9F72731B8F00065B1CC /* FriendDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C0C9F62731B8F00065B1CC /* FriendDatabase.swift */; };
@@ -201,6 +203,8 @@
 		99AC85AA274E8D16006A9D51 /* NewsLikesAndCommentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsLikesAndCommentsTableViewCell.xib; sourceTree = "<group>"; };
 		99AC85AD274E9533006A9D51 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		99AC85AF274E954E006A9D51 /* NewsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsFeed.storyboard; sourceTree = "<group>"; };
+		99B3A6BF275504E500202518 /* NewsfeedGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedGroup.swift; sourceTree = "<group>"; };
+		99B3A6C12755064500202518 /* NewsfeedProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedProfile.swift; sourceTree = "<group>"; };
 		99B505BA26F0F311000691E6 /* Drawing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Drawing.storyboard; sourceTree = "<group>"; };
 		99B505BC26F0F348000691E6 /* drawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawingViewController.swift; sourceTree = "<group>"; };
 		99C0C9F62731B8F00065B1CC /* FriendDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDatabase.swift; sourceTree = "<group>"; };
@@ -452,6 +456,8 @@
 				9984A3AA273AC28C006BC0FC /* UserFirebase.swift */,
 				999914B3273C15DC0083465E /* GroupFirebase.swift */,
 				999199C32742771A008EDA3F /* Newsfeed.swift */,
+				99B3A6BF275504E500202518 /* NewsfeedGroup.swift */,
+				99B3A6C12755064500202518 /* NewsfeedProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -809,6 +815,7 @@
 				9942949126EF40FD00E02EEF /* Constants.swift in Sources */,
 				9993C4DE27231C6700084F97 /* Friend.swift in Sources */,
 				9984A3AB273AC28C006BC0FC /* UserFirebase.swift in Sources */,
+				99B3A6C22755064500202518 /* NewsfeedProfile.swift in Sources */,
 				994D98B726E9210B00565D1C /* TabPlayViewController.swift in Sources */,
 				996B87F42721B2D00094B326 /* GroupsSearchAPI.swift in Sources */,
 				99979A4B2719B535000E5CCB /* CustomInteractiveTransition.swift in Sources */,
@@ -855,6 +862,7 @@
 				996729BF271D897700774E18 /* Session.swift in Sources */,
 				996494A62706EC1800C42EDF /* AnimationOfImageViewController.swift in Sources */,
 				99998A37270B5D3A008C0760 /* ViewControllerDismisser.swift in Sources */,
+				99B3A6C0275504E500202518 /* NewsfeedGroup.swift in Sources */,
 				99981DB027207D5C0090EF8A /* FriendsAPI.swift in Sources */,
 				994D98B426E9173E00565D1C /* DebugMenuViewController.swift in Sources */,
 			);

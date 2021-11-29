@@ -31,6 +31,8 @@ class FriendsListViewController: UIViewController {
     
     private var newsfeedService = NewsfeedAPI()
     private var newsfeed: [News] = []
+    private var newsfeedGroups: [NewsfeedGroup] = []
+    private var newsfeedProfiles: [NewsfeedProfile] = []
     
     private let friendDB = FriendDatabase()
     private let photosDB = PhotoDatabase()
@@ -134,8 +136,10 @@ class FriendsListViewController: UIViewController {
     }
     
     @IBAction func getNewsButtonPressed(_ sender: Any) {
-        newsfeedService.getNews(completion: { news in
+        newsfeedService.getNews(completion: { news, groups, profiles in
             self.newsfeed = news
+            self.newsfeedGroups = groups
+            self.newsfeedProfiles = profiles
             self.tableWithResults.reloadData()
         })
     }
