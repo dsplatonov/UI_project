@@ -85,6 +85,9 @@
 		99998A3A270B6CCD008C0760 /* CustomViewPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99998A39270B6CCD008C0760 /* CustomViewPresentViewController.swift */; };
 		99998A3C270B6CE1008C0760 /* CustomViewPresent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99998A3B270B6CE1008C0760 /* CustomViewPresent.storyboard */; };
 		999C1BB026F2363C0038C9D0 /* drawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999C1BAF26F2363C0038C9D0 /* drawView.swift */; };
+		99A9E7D027578122006BA0D0 /* GetDataFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A9E7CF27578122006BA0D0 /* GetDataFromURL.swift */; };
+		99A9E7D227578471006BA0D0 /* ParseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A9E7D127578471006BA0D0 /* ParseData.swift */; };
+		99A9E7D42757D1EC006BA0D0 /* PresentFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A9E7D32757D1EC006BA0D0 /* PresentFriends.swift */; };
 		99AC859B274E7818006A9D51 /* NewsTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AC8599274E7818006A9D51 /* NewsTextTableViewCell.swift */; };
 		99AC859C274E7818006A9D51 /* NewsTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99AC859A274E7818006A9D51 /* NewsTextTableViewCell.xib */; };
 		99AC85A1274E7FC6006A9D51 /* NewsPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AC859F274E7FC6006A9D51 /* NewsPhotoTableViewCell.swift */; };
@@ -193,6 +196,9 @@
 		99998A39270B6CCD008C0760 /* CustomViewPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewPresentViewController.swift; sourceTree = "<group>"; };
 		99998A3B270B6CE1008C0760 /* CustomViewPresent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomViewPresent.storyboard; sourceTree = "<group>"; };
 		999C1BAF26F2363C0038C9D0 /* drawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawView.swift; sourceTree = "<group>"; };
+		99A9E7CF27578122006BA0D0 /* GetDataFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataFromURL.swift; sourceTree = "<group>"; };
+		99A9E7D127578471006BA0D0 /* ParseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseData.swift; sourceTree = "<group>"; };
+		99A9E7D32757D1EC006BA0D0 /* PresentFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentFriends.swift; sourceTree = "<group>"; };
 		99AC8599274E7818006A9D51 /* NewsTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTextTableViewCell.swift; sourceTree = "<group>"; };
 		99AC859A274E7818006A9D51 /* NewsTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTextTableViewCell.xib; sourceTree = "<group>"; };
 		99AC859F274E7FC6006A9D51 /* NewsPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPhotoTableViewCell.swift; sourceTree = "<group>"; };
@@ -476,6 +482,7 @@
 		99981DAE27207D280090EF8A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				99A9E7CE275780DB006BA0D0 /* FriendsOperationChain */,
 				9993C4DC27231C4A00084F97 /* Models */,
 				996729BE271D897700774E18 /* Session.swift */,
 				99981DAF27207D5C0090EF8A /* FriendsAPI.swift */,
@@ -514,6 +521,16 @@
 				9964025B2719D9520015CA09 /* NavigationViewController.swift */,
 			);
 			path = CustomViewPresent;
+			sourceTree = "<group>";
+		};
+		99A9E7CE275780DB006BA0D0 /* FriendsOperationChain */ = {
+			isa = PBXGroup;
+			children = (
+				99A9E7CF27578122006BA0D0 /* GetDataFromURL.swift */,
+				99A9E7D127578471006BA0D0 /* ParseData.swift */,
+				99A9E7D32757D1EC006BA0D0 /* PresentFriends.swift */,
+			);
+			path = FriendsOperationChain;
 			sourceTree = "<group>";
 		};
 		99AC8598274E76BA006A9D51 /* Newsfeed */ = {
@@ -811,6 +828,7 @@
 				999C1BB026F2363C0038C9D0 /* drawView.swift in Sources */,
 				99748149273414A6002D915B /* GroupSearchDatabase.swift in Sources */,
 				9969934B2726F214003881D4 /* Group.swift in Sources */,
+				99A9E7D42757D1EC006BA0D0 /* PresentFriends.swift in Sources */,
 				996494AA270711BB00C42EDF /* ImageAnimation.swift in Sources */,
 				9942949126EF40FD00E02EEF /* Constants.swift in Sources */,
 				9993C4DE27231C6700084F97 /* Friend.swift in Sources */,
@@ -843,6 +861,7 @@
 				99C0C9F72731B8F00065B1CC /* FriendDatabase.swift in Sources */,
 				9993C4DB27231A9200084F97 /* Data+PrettyJSON.swift in Sources */,
 				993083A126F8A00000631B17 /* PostControl.swift in Sources */,
+				99A9E7D227578471006BA0D0 /* ParseData.swift in Sources */,
 				9969B0AA2714753B009545CE /* PresentationAnimator.swift in Sources */,
 				99AC859B274E7818006A9D51 /* NewsTextTableViewCell.swift in Sources */,
 				99AC85AE274E9534006A9D51 /* NewsFeedViewController.swift in Sources */,
@@ -858,6 +877,7 @@
 				99998A3A270B6CCD008C0760 /* CustomViewPresentViewController.swift in Sources */,
 				9942152B26E26E51007F635F /* SceneDelegate.swift in Sources */,
 				996B87EC272172110094B326 /* FriendsListViewController.swift in Sources */,
+				99A9E7D027578122006BA0D0 /* GetDataFromURL.swift in Sources */,
 				996494AC27072AA400C42EDF /* LoadingAnimationView.swift in Sources */,
 				996729BF271D897700774E18 /* Session.swift in Sources */,
 				996494A62706EC1800C42EDF /* AnimationOfImageViewController.swift in Sources */,

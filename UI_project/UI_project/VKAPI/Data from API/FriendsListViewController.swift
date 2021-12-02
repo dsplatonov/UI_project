@@ -12,11 +12,11 @@ import Firebase
 class FriendsListViewController: UIViewController {
 
     @IBOutlet private var searchTextField: UITextField!
-    @IBOutlet private var tableWithResults: UITableView!
+    @IBOutlet var tableWithResults: UITableView!
 
     
     private let friendsService = FriendsAPI()
-    private var friends: [Friend] = []
+    var friends: [Friend] = []
     
     private let photoService = PhotosAPI()
     private var photos: [Photo] = []
@@ -61,15 +61,45 @@ class FriendsListViewController: UIViewController {
     
     @IBAction func getFriendsListButtonPressed(_ sender: Any) {
 
-        friendsService.getFriends(completion: { [weak self] friends in
-            
-            if let newFriends = self?.friendDB.read() {
-                self?.friends = newFriends
-            }
-            
-            self?.tableWithResults.reloadData()
-            print("Friends list successfully received")
-        })
+        
+        //Realtime results
+//        friendsService.getFriends(completion: { [weak self] friends in
+//
+//            if let newFriends = self?.friendDB.read() {
+//                self?.friends = newFriends
+//            }
+//
+//            self?.tableWithResults.reloadData()
+//            print("Friends list successfully received")
+//        })
+        
+        
+        
+        //Operation queue results
+        let operationsQueue = OperationQueue.main
+        
+        //Creating operations
+        let getFriends = GetDataFromURL()
+        let parseFriends = ParseData()
+        let showFriends = PresentFriends(controller: self)
+
+        
+        parseFriends.addDependency(getFriends)
+        showFriends.addDependency(parseFriends)
+        
+        let operations = [getFriends, parseFriends, showFriends]
+        operationsQueue.addOperations(operations, waitUntilFinished: false)
+        
+        //Adding operations to queue
+//        operationsQueue.addOperation(getFriends)
+//        
+//        operationsQueue.addOperation(parseFriends)
+//        
+//        OperationQueue.main.addOperation(showFriends)
+        
+        debugPrint("Queue done")
+
+        
         
     }
     
@@ -162,7 +192,7 @@ extension FriendsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //Friends API case
-//        return friends.count
+        return friends.count
         
         //Photos API case
 //        return photos.count
@@ -175,15 +205,15 @@ extension FriendsListViewController: UITableViewDataSource {
 //        return searchResults.count
         
         //Newsfeed API
-        return newsfeed.count
+//        return newsfeed.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         //Friend API
-//        let currentFriend = friends[indexPath.row]
-//        cell.textLabel?.text = currentFriend.lastName + " " + currentFriend.firstName
+        let currentFriend = friends[indexPath.row]
+        cell.textLabel?.text = currentFriend.lastName + " " + currentFriend.firstName
         
         //PhotoAPI
 //        let currentPhoto = photos[indexPath.row]
@@ -222,9 +252,8 @@ extension FriendsListViewController: UITableViewDataSource {
 //        cell.textLabel?.text = currentSearchResult?.name
         
         //Newsfeed API
-        let currentNews = newsfeed[indexPath.row]
-//        cell.textLabel?.text = String(currentNews.postID)
-        cell.textLabel?.text = currentNews.text
+//        let currentNews = newsfeed[indexPath.row]
+//        cell.textLabel?.text = currentNews.text
         
         return cell
     }
